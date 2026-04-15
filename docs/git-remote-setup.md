@@ -58,3 +58,28 @@ git push -u origin main
 - Remote URL'yi Codex'e ver.
 - HTTPS kullaniyorsan push sirasinda token/giris gerekebilir.
 - SSH kullaniyorsan makinede SSH key'in GitHub/GitLab hesabina ekli olmali.
+
+## Mevcut Durum
+
+- Yerel repo hazir.
+- `main` dali hazir.
+- Ilk commit atildi: `f2e2501 Initialize project memory bank and Git setup`
+- Remote baglandi: `origin https://github.com/Mustati0n/BelediyeAtikSistemiV2.git`
+- Push denendi ama GitHub HTTPS sifre kabul etmedigi icin token/kimlik dogrulama istedi.
+
+Push icin iki temiz secenek var:
+
+1. GitHub CLI ile giris yap:
+
+```bash
+gh auth login
+git push -u origin main
+```
+
+2. Personal Access Token kullan:
+
+```bash
+git push -u origin main
+```
+
+GitHub kullanici adi sordugunda `Mustati0n`, password/token sordugunda GitHub Personal Access Token girilir. Normal hesap sifresi artik desteklenmez.

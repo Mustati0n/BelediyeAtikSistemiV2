@@ -18,6 +18,9 @@ Proje hafizasi kuruldu, kullanici ilk teknik kararları onayladi ve yerel Git de
 - Yerel Git deposu `main` dali ile baslatildi.
 - `.gitignore` ve `docs/git-remote-setup.md` eklendi.
 - GitHub remote bilgisi alindi: `https://github.com/Mustati0n/BelediyeAtikSistemiV2.git`.
+- Ilk commit atildi: `f2e2501 Initialize project memory bank and Git setup`.
+- Remote `origin` eklendi.
+- Push denemesi GitHub HTTPS kimlik dogrulamasi nedeniyle basarisiz oldu; token veya GitHub CLI login gerekiyor.
 
 ## Aktif Kararlar
 
