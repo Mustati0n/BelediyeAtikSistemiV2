@@ -20,6 +20,9 @@
 - Zaman dilimi: Europe/Istanbul
 - Repo su an iskeletsiz; proje yapisi kurulacak.
 - Git deposu kullanilacak; yerel commit'ler proje fazlarina gore atilacak. Push islemi yalnizca uzak repo tanimlandiktan sonra yapilabilir.
+- Faz 1 iskeleti kuruldu ve `.venv` icinde bagimlilikler yuklendi.
+- Bu ortamda Docker CLI Podman ile emule ediliyor; `docker compose` komutu `podman-compose` provider'i ile calisiyor.
+- Aktif Python surumu: 3.14.3.
 
 ## Onerilen Klasor Yapisi
 
@@ -64,3 +67,10 @@ memory-bank/
 - PostgreSQL Docker Compose ile calistirilacak.
 - `.env` ile veritabani, JWT secret ve uygulama ayarlari tasinacak.
 - Ilk seed verileri: roller, demo personeller, araclar, bolgeler, konteynerler ve sistem parametreleri.
+
+## Faz 1 Dogrulama
+
+- `.venv/bin/python -m pytest`: 2 test gecti.
+- `.venv/bin/python -m ruff check .`: gecti.
+- `python3 -m compileall backend`: gecti.
+- `docker compose config`: gecti.

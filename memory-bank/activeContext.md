@@ -2,7 +2,7 @@
 
 ## Guncel Odak
 
-Proje hafizasi kuruldu, kullanici ilk teknik kararları onayladi ve yerel Git deposu baslatildi. Sonraki adim Faz 1 kapsaminda backend/API, veritabani, Docker Compose ve test altyapisini kurmak olacak. Frontend ve PySide6 ekranlari daha sonra eklenecek; bu nedenle backend kolay entegre edilebilir API sozlesmeleriyle tasarlanacak.
+Proje hafizasi kuruldu, kullanici ilk teknik kararları onayladi, Git/GitHub akisi tamamlandi ve Faz 1 backend iskeleti kuruldu. Sonraki adim Faz 2 kapsaminda domain modelleri, enumlar, iliskiler ve ilk veritabani semasini kurmak olacak.
 
 ## Son Degisiklikler
 
@@ -21,6 +21,11 @@ Proje hafizasi kuruldu, kullanici ilk teknik kararları onayladi ve yerel Git de
 - Ilk commit atildi: `f2e2501 Initialize project memory bank and Git setup`.
 - Remote `origin` eklendi.
 - Push basarili oldu; `main` dali `origin/main` ile eslesiyor.
+- Faz 1 backend/API iskeleti kuruldu.
+- FastAPI app factory, `/api/v1/health`, SQLAlchemy base/session, Alembic, Docker Compose PostgreSQL, `.env.example`, `pyproject.toml`, backend dokumani ve test altyapisi eklendi.
+- Bagimlilikler `.venv` icine kuruldu.
+- Dogrulama: `pytest` 2 test geçti, `ruff check .` geçti, `python3 -m compileall backend` geçti, `docker compose config` geçti.
+- Python 3.14 ortaminda `TestClient` tabanli ilk test askida kaldigi icin health testi simdilik handler/app sozlesmesi uzerinden yazildi.
 
 ## Aktif Kararlar
 
@@ -45,4 +50,4 @@ Proje hafizasi kuruldu, kullanici ilk teknik kararları onayladi ve yerel Git de
 
 ## Sonraki Adim
 
-Faz 1 devam edecek: ilk Git commit ve push islemi tamamlandiktan sonra FastAPI uygulama yapisi, SQLAlchemy ayarlari, Docker Compose PostgreSQL, Alembic hazirligi ve test altyapisi kurulacak.
+Faz 2'ye gecilecek: enumlar, SQLAlchemy domain modelleri, foreign key iliskileri, nullability kararları, ilk Alembic migration ve model testleri.

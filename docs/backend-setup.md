@@ -1,0 +1,55 @@
+# Backend Setup
+
+## Amac
+
+Faz 1 backend iskeleti API-first olacak sekilde kurulur. UI ekranlari daha sonra eklenecegi icin endpoint ve schema yapilari rapordaki ekran ihtiyaclarina gore genisletilecektir.
+
+## Klasorler
+
+- `backend/app/api`: FastAPI route tanimlari.
+- `backend/app/core`: Ayarlar, guvenlik ve ortak yardimcilar.
+- `backend/app/db`: SQLAlchemy base/session altyapisi.
+- `backend/app/models`: Domain veritabani modelleri.
+- `backend/app/schemas`: Pydantic request/response sozlesmeleri.
+- `backend/app/services`: Is kurallari ve durum gecisi servisleri.
+- `backend/tests`: Backend testleri.
+
+## Komutlar
+
+Bagimlilik kurulumu:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -e ".[dev]"
+```
+
+API calistirma:
+
+```bash
+python -m uvicorn backend.app.main:app --reload
+```
+
+PostgreSQL:
+
+```bash
+docker compose up -d db
+```
+
+Test:
+
+```bash
+pytest
+```
+
+Migrasyon olusturma:
+
+```bash
+alembic revision --autogenerate -m "create initial schema"
+```
+
+Migrasyon uygulama:
+
+```bash
+alembic upgrade head
+```

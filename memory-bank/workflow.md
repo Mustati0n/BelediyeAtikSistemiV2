@@ -17,24 +17,24 @@ Teslim: `memory-bank/` dokumantasyonu, UML notlari, faz planı, acik sorular.
 
 ## Faz 1 - Proje Iskeleti ve Altyapi
 
-Durum: Devam ediyor
+Durum: Tamamlandi
 
-- [ ] Python proje yapisini kur.
+- [x] Python proje yapisini kur.
 - [x] Git deposunu baslat.
-- [ ] Backend klasor yapisini olustur.
-- [ ] FastAPI uygulama girisini hazirla.
-- [ ] SQLAlchemy 2.0 ve veritabani oturum altyapisini kur.
-- [ ] Docker Compose ile PostgreSQL servis tanimini ekle.
-- [ ] Alembic migrasyon altyapisini kur.
-- [ ] Test altyapisini kur.
-- [ ] Ortam degiskenleri ve konfig yapisini ekle.
-- [ ] API-first sozlesme yapisini kur: request/response schema'lari, servis katmani ve UI dostu endpoint ayrimi.
+- [x] Backend klasor yapisini olustur.
+- [x] FastAPI uygulama girisini hazirla.
+- [x] SQLAlchemy 2.0 ve veritabani oturum altyapisini kur.
+- [x] Docker Compose ile PostgreSQL servis tanimini ekle.
+- [x] Alembic migrasyon altyapisini kur.
+- [x] Test altyapisini kur.
+- [x] Ortam degiskenleri ve konfig yapisini ekle.
+- [x] API-first sozlesme yapisini kur: request/response schema'lari, servis katmani ve UI dostu endpoint ayrimi.
 
 Teslim: Calisan bos API, health endpoint, test komutu, migrasyon altyapisi.
 
 ## Faz 2 - Domain Modeli ve Veritabani
 
-Durum: Bekliyor
+Durum: Siradaki
 
 - [ ] Enumlari tanimla.
 - [ ] Rol ve Personel modelini yaz.

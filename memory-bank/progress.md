@@ -2,7 +2,7 @@
 
 ## Durum Ozeti
 
-Proje Faz 1'e gecti. Yerel Git deposu baslatildi ve `main` dali ayarlandi. Kod tabani henuz kurulmadı; sonraki adim backend/API iskeletini olusturmak.
+Faz 1 tamamlandi. Backend/API iskeleti, FastAPI health endpoint, SQLAlchemy oturum altyapisi, Alembic migrasyon ortami, Docker Compose PostgreSQL tanimi, `.env.example`, Python paket tanimi ve test altyapisi kuruldu. Sonraki adim Faz 2: domain modelleri ve veritabani semasi.
 
 ## Tamamlananlar
 
@@ -28,14 +28,23 @@ Proje Faz 1'e gecti. Yerel Git deposu baslatildi ve `main` dali ayarlandi. Kod t
 - [x] Ilk commit atildi: `f2e2501 Initialize project memory bank and Git setup`.
 - [x] Remote `origin` eklendi.
 - [x] GitHub push basarili; `main` dali `origin/main` ile eslesiyor.
+- [x] Python proje yapisi kuruldu.
+- [x] Backend klasor yapisi olusturuldu.
+- [x] FastAPI uygulama girisi ve `/api/v1/health` endpoint'i eklendi.
+- [x] SQLAlchemy `Base`, engine ve session altyapisi eklendi.
+- [x] Docker Compose PostgreSQL servis tanimi eklendi.
+- [x] Alembic migrasyon altyapisi eklendi.
+- [x] `.env.example` ve ayar katmani eklendi.
+- [x] API-first klasor ayrimi, base schema ve servis katmani yerleri eklendi.
+- [x] Sanal ortamda bagimlilik kurulumu dogrulandi.
+- [x] Test, lint, compile ve compose config kontrolleri yapildi.
 
 ## Devam Edenler
 
-- [ ] Faz 1 proje iskeleti kurulumu.
+- [ ] Faz 2 domain modeli ve veritabani semasi.
 
 ## Siradakiler
 
-- [ ] Proje iskeletinin kurulmasi.
 - [ ] Backend domain modellerinin yazilmasi.
 - [ ] Auth/RBAC altyapisinin kurulmasi.
 - [ ] Ilk API endpoint'leri ve testleri.
@@ -44,6 +53,7 @@ Proje Faz 1'e gecti. Yerel Git deposu baslatildi ve `main` dali ayarlandi. Kod t
 
 ## Bilinen Riskler
 
+- Python 3.14 ortaminda `fastapi.testclient.TestClient` ile ilk health testi askida kaldi; Faz 1 testi simdilik handler/app sozlesmesi uzerinden dogrulandi. Uygulama gelistikce ASGI/HTTP test yaklasimi tekrar degerlendirilecek.
 - Tesis/stok/satis sequence diyagraminin PlantUML kodu raporda yok; uygulama oncesi yeniden yazilmasi iyi olur.
 - Masaustu harita gosterimi icin PySide6 tarafinda teknik secim net degil; ilk MVP'de gorev listesi + koordinat ile ilerlenebilir.
 - Satisin dogrudan yapilmasi stok rezervasyon/geri alma detayini disarida birakir; sonraki versiyonda gerekirse genisletilecek.
