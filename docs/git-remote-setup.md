@@ -65,9 +65,9 @@ git push -u origin main
 - `main` dali hazir.
 - Ilk commit atildi: `f2e2501 Initialize project memory bank and Git setup`
 - Remote baglandi: `origin https://github.com/Mustati0n/BelediyeAtikSistemiV2.git`
-- Push denendi ama GitHub HTTPS sifre kabul etmedigi icin token/kimlik dogrulama istedi.
+- Push basarili. `main` dali `origin/main` ile eslesiyor.
 
-Push icin iki temiz secenek var:
+Gelecekte push kimlik dogrulamasi isterse iki temiz secenek var:
 
 1. GitHub CLI ile giris yap:
 
@@ -82,4 +82,4 @@ git push -u origin main
 git push -u origin main
 ```
 
-GitHub kullanici adi sordugunda `Mustati0n`, password/token sordugunda GitHub Personal Access Token girilir. Normal hesap sifresi artik desteklenmez.
+GitHub kullanici adi sordugunda `Mustati0n`, password/token sordugunda GitHub Personal Access Token girilir. Normal hesap sifresi artik desteklenmez. Bu makinede kimlik bilgisi daha once kaydedildiyse tekrar token sormayabilir.

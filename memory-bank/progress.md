@@ -27,10 +27,10 @@ Proje Faz 1'e gecti. Yerel Git deposu baslatildi ve `main` dali ayarlandi. Kod t
 - [x] GitHub remote URL ve commit kimligi alindi.
 - [x] Ilk commit atildi: `f2e2501 Initialize project memory bank and Git setup`.
 - [x] Remote `origin` eklendi.
+- [x] GitHub push basarili; `main` dali `origin/main` ile eslesiyor.
 
 ## Devam Edenler
 
-- [ ] GitHub push icin token/kimlik dogrulama.
 - [ ] Faz 1 proje iskeleti kurulumu.
 
 ## Siradakiler
