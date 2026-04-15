@@ -1,0 +1,56 @@
+# Local Codex/session marker
+.codex
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# FastAPI / local runtime
+*.log
+logs/
+uploads/
+media/
+static/uploads/
+
+# Databases and generated files
+*.sqlite
+*.sqlite3
+*.db
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Node/frontend artifacts if a frontend is added later
+node_modules/
+dist/
+build/
+.next/
+.vite/
+
+# Docker local volumes/backups
+docker-data/
+postgres-data/
