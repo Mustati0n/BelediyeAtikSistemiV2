@@ -2,17 +2,11 @@
 
 Bu proje yerel Git deposu olarak baslatildi. Uzak repoya baglamak icin GitHub, GitLab veya benzeri bir serviste bos bir repo olusturmak gerekir.
 
-## Bu Projenin Remote Bilgisi
-
-- Remote URL: `https://github.com/Mustati0n/BelediyeAtikSistemiV2.git`
-- Git kullanici adi: `Mustati0n`
-- Git e-posta: `33mustafa33sahin33@gmail.com`
-
 ## GitHub Ornegi
 
 1. GitHub'a gir.
 2. Yeni repository olustur.
-3. Repository adini ornegin `BelediyeAtikSistemi` yap.
+3. Repository adini ornegin `BelediyeAtikSistemiV2` yap.
 4. README, `.gitignore` veya license ekleme; repo bos kalsin.
 5. GitHub'in verdigi HTTPS veya SSH remote URL'sini kopyala.
 
@@ -58,28 +52,3 @@ git push -u origin main
 - Remote URL'yi Codex'e ver.
 - HTTPS kullaniyorsan push sirasinda token/giris gerekebilir.
 - SSH kullaniyorsan makinede SSH key'in GitHub/GitLab hesabina ekli olmali.
-
-## Mevcut Durum
-
-- Yerel repo hazir.
-- `main` dali hazir.
-- Ilk commit atildi: `f2e2501 Initialize project memory bank and Git setup`
-- Remote baglandi: `origin https://github.com/Mustati0n/BelediyeAtikSistemiV2.git`
-- Push basarili. `main` dali `origin/main` ile eslesiyor.
-
-Gelecekte push kimlik dogrulamasi isterse iki temiz secenek var:
-
-1. GitHub CLI ile giris yap:
-
-```bash
-gh auth login
-git push -u origin main
-```
-
-2. Personal Access Token kullan:
-
-```bash
-git push -u origin main
-```
-
-GitHub kullanici adi sordugunda `Mustati0n`, password/token sordugunda GitHub Personal Access Token girilir. Normal hesap sifresi artik desteklenmez. Bu makinede kimlik bilgisi daha once kaydedildiyse tekrar token sormayabilir.
