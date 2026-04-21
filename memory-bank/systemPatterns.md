@@ -91,6 +91,15 @@ Mevcut uygulama durumu:
 - `POST /api/v1/finance/maas/toplu` ayin 15'i kuralini uygular.
 - `GET /api/v1/finance/raporlar/kar-zarar` onayli gelir/gider ozetini dondurur.
 
+Tesis/stok/satis uygulama durumu:
+
+- `POST /api/v1/recycling/teslimler` soforun tesis teslim kaydi acmasini saglar.
+- `POST /api/v1/recycling/teslimler/{id}/onayla` operator teslimi devralir.
+- `POST /api/v1/recycling/teslimler/{id}/ayristir` teslim edilen atigi stok hareketlerine donusturur.
+- `GET /api/v1/recycling/stoklar` mevcut stok durumunu listeler.
+- `POST /api/v1/recycling/satislar` stoktan duserek satis ve bekleyen `GelirKaydi` olusturur.
+- `GET /api/v1/recycling/gelirler/bekleyen`, `.../onayla` ve `.../reddet` muhasebe gelir akislarini yurutur.
+
 ## RBAC Deseni
 
 - Her personel bir role baglanir.

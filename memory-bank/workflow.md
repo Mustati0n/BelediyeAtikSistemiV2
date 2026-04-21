@@ -91,21 +91,21 @@ Teslim: Bakim-gider onayi, maas odeme, finans raporu.
 
 ## Faz 6 - Tesis, Stok ve Satis
 
-Durum: Siradaki
+Durum: Tamamlandi
 
-- [ ] Sofor tesise atik teslim endpoint'ini yaz.
-- [ ] Operator teslim alma akisini yaz.
-- [ ] Ayristirma ve stok hareketi akisini yaz.
-- [ ] Stok goruntuleme endpoint'lerini yaz.
-- [ ] Satis kaydi olustur ve stoktan dus.
-- [ ] Satistan bekleyen gelir kaydi uret.
-- [ ] Muhasebe gelir onay/red endpoint'lerini yaz.
+- [x] Sofor tesise atik teslim endpoint'ini yaz.
+- [x] Operator teslim alma akisini yaz.
+- [x] Ayristirma ve stok hareketi akisini yaz.
+- [x] Stok goruntuleme endpoint'lerini yaz.
+- [x] Satis kaydi olustur ve stoktan dus.
+- [x] Satistan bekleyen gelir kaydi uret.
+- [x] Muhasebe gelir onay/red endpoint'lerini yaz.
 
 Teslim: Teslim -> ayristirma -> stok -> satis -> gelir onayi akisi.
 
 ## Faz 7 - Arayuzler
 
-Durum: Bekliyor
+Durum: Siradaki
 
 - [ ] Vatandas ihbar portalini Jinja2 ile yap.
 - [ ] Login ve rol yonlendirme ekranlarini yap.

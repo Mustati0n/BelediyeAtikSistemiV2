@@ -2,7 +2,7 @@
 
 ## Durum Ozeti
 
-Faz 5 tamamlandi. Backend/API iskeleti ve domain modeli ustune auth, gorev havuzu, bakim ve muhasebe endpoint'leri kuruldu. Sonraki adim Faz 6: tesis, stok ve satis.
+Faz 6 tamamlandi. Backend/API iskeleti ve domain modeli ustune auth, gorev havuzu, bakim, muhasebe, tesis teslim, stok ve satis endpoint'leri kuruldu. Sonraki adim Faz 7: arayuzler ve demo deneyimi.
 
 ## Tamamlananlar
 
@@ -71,17 +71,26 @@ Faz 5 tamamlandi. Backend/API iskeleti ve domain modeli ustune auth, gorev havuz
 - [x] Toplu odemede ayin 15'i kuralı eklendi.
 - [x] Kar-zarar rapor ozeti endpoint'i eklendi.
 - [x] Bakim/muhasebe testleri eklendi; backend test sayisi 18'e cikti ve hepsi gecti.
+- [x] Soforun tesis teslim endpoint'i eklendi.
+- [x] Operator teslim onayi endpoint'i eklendi.
+- [x] Ayristirma ve stok hareketi endpoint'i eklendi.
+- [x] Stok listeleme endpoint'i eklendi.
+- [x] Satis kaydi ve stok dusumu eklendi.
+- [x] Bekleyen gelir kaydi uretimi eklendi.
+- [x] Muhasebe gelir onay/red endpoint'leri eklendi.
+- [x] Geri donusum testleri eklendi; backend test sayisi 22'ye cikti ve hepsi gecti.
+- [x] Swagger ve test icin geri donusum endpoint listesi dokumante edildi.
 
 ## Devam Edenler
 
-- [ ] Faz 6 tesis, stok ve satis.
+- [ ] Faz 7 arayuzler ve demo deneyimi.
 
 ## Siradakiler
 
-- [ ] Tesis teslim ve operator onay akisleri.
-- [ ] Ayristirma ve stok hareketleri.
-- [ ] Satis kaydi ve gelir kaydi uretimi.
-- [ ] Muhasebe gelir onay/red akisleri.
+- [ ] Vatandas ihbar portalinin hafif arayuzu.
+- [ ] Gecici demo ekranlari veya test panelleri.
+- [ ] PySide6 personel ekranlari icin adapter dusuncesi.
+- [ ] Arkadas frontend'i ile entegrasyon icin ornek veri akislari.
 - [ ] Vatandas ihbar portali.
 - [ ] PySide6 personel ekranlari.
 

@@ -51,7 +51,8 @@ def seeded_users(db_session: Session) -> dict[str, Personel]:
     driver_role = Rol(ad="Sofor", aciklama="Driver")
     finance_role = Rol(ad="Muhasebe Personeli", aciklama="Finance")
     tech_role = Rol(ad="Bakim Teknisyeni", aciklama="Tech")
-    db_session.add_all([admin_role, driver_role, finance_role, tech_role])
+    operator_role = Rol(ad="Geri Donusum Operatoru", aciklama="Operator")
+    db_session.add_all([admin_role, driver_role, finance_role, tech_role, operator_role])
     db_session.flush()
 
     admin = Personel(
@@ -98,10 +99,28 @@ def seeded_users(db_session: Session) -> dict[str, Personel]:
         aktif_mi=True,
         rol=tech_role,
     )
-    db_session.add_all([admin, driver, finance, tech])
+    operator = Personel(
+        tc_no="10000000005",
+        sifre_hash=get_password_hash("Operator123!"),
+        ad_soyad="Operator Kullanici",
+        email="operator@test.local",
+        telefon="5551000005",
+        taban_maas=Decimal("34000.00"),
+        cocuk_sayisi=0,
+        aktif_mi=True,
+        rol=operator_role,
+    )
+    db_session.add_all([admin, driver, finance, tech, operator])
     db_session.commit()
     db_session.refresh(admin)
     db_session.refresh(driver)
     db_session.refresh(finance)
     db_session.refresh(tech)
-    return {"admin": admin, "driver": driver, "finance": finance, "tech": tech}
+    db_session.refresh(operator)
+    return {
+        "admin": admin,
+        "driver": driver,
+        "finance": finance,
+        "tech": tech,
+        "operator": operator,
+    }

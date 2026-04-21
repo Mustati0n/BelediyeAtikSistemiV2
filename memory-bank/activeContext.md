@@ -2,7 +2,7 @@
 
 ## Guncel Odak
 
-Git/GitHub akisi, Faz 1 backend iskeleti, Faz 2 domain modeli, Faz 3 auth/RBAC/audit temeli, Faz 4 operasyon/gorev havuzu temeli ve Faz 5 bakim/muhasebe temeli tamamlandi. Sonraki adim Faz 6 kapsaminda tesis, stok ve satis akislarini API seviyesinde kurmak olacak.
+Git/GitHub akisi, Faz 1 backend iskeleti, Faz 2 domain modeli, Faz 3 auth/RBAC/audit temeli, Faz 4 operasyon/gorev havuzu temeli, Faz 5 bakim/muhasebe temeli ve Faz 6 tesis/stok/satis temeli tamamlandi. Sonraki adim Faz 7 kapsaminda gecici arayuzler ve demo akislarini kurmak olacak.
 
 ## Son Degisiklikler
 
@@ -53,6 +53,12 @@ Git/GitHub akisi, Faz 1 backend iskeleti, Faz 2 domain modeli, Faz 3 auth/RBAC/a
 - Maas hesaplama, avans/tekli odeme, toplu maas odemesi ve kar-zarar ozet endpoint'leri eklendi.
 - Toplu maas odemesine ayin 15'i kuralı servis katmaninda eklendi.
 - Bakim/finans testleri eklendi; toplam backend test sayisi 18 oldu ve hepsi gecti.
+- Soforun tesis teslim kaydi olusturmasi icin endpoint eklendi.
+- Operatorun teslim onayi ve ayristirma/stok hareketi akisleri eklendi.
+- Stok listeleme endpoint'i eklendi.
+- Satis kaydi olusturulunca stok dusen ve bekleyen gelir kaydi ureten servis katmani eklendi.
+- Muhasebe icin bekleyen gelir listeleme ve gelir onay/red endpoint'leri eklendi.
+- Geri donusum testleri eklendi; toplam backend test sayisi 22 oldu ve hepsi gecti.
 
 ## Aktif Kararlar
 
@@ -74,6 +80,7 @@ Git/GitHub akisi, Faz 1 backend iskeleti, Faz 2 domain modeli, Faz 3 auth/RBAC/a
 - Gecici gosterim ekranlari veya demo endpoint'leri asil is kurallarindan ayrik tutulacak; arkadasin frontend'i geldiginde backend'i yeniden yazma ihtiyaci olmadan entegrasyon yapilacak.
 - Operasyon tarafinda test ve demo ihtiyaci icin public/report ve role-protected endpoint'ler kuruldu; bunlar kalici API sozlesmesinin parcasi olarak tasarlandi.
 - Bakim teknik tamamlanmasi ile gider onayi ayrik akislarda tutuluyor; testle de dogrulandi.
+- Satis MVP karari korunuyor; gelir reddedilse bile stok geri alma detayi simdilik eklenmiyor.
 
 ## Dikkat Edilecek Noktalar
 
@@ -84,4 +91,4 @@ Git/GitHub akisi, Faz 1 backend iskeleti, Faz 2 domain modeli, Faz 3 auth/RBAC/a
 
 ## Sonraki Adim
 
-Faz 6'ya gecilecek: soforun tesis teslim endpoint'i, operator teslim alma, ayristirma ve stok hareketleri, stok goruntuleme, satis kaydi ve gelir onay akisleri.
+Faz 7'ye gecilecek: Swagger tabanli deneme akislarini destekleyen hafif demo arayuzleri, vatandas ihbar portali ve daha sonra PySide6/arkadas frontend entegrasyonuna uygun adapter katmani.

@@ -76,6 +76,14 @@ Bu asamada test etmek icin hazir temel endpoint gruplari:
 - `POST /api/v1/finance/maas/tekli`
 - `POST /api/v1/finance/maas/toplu`
 - `GET /api/v1/finance/raporlar/kar-zarar`
+- `POST /api/v1/recycling/teslimler`
+- `POST /api/v1/recycling/teslimler/{id}/onayla`
+- `POST /api/v1/recycling/teslimler/{id}/ayristir`
+- `GET /api/v1/recycling/stoklar`
+- `POST /api/v1/recycling/satislar`
+- `GET /api/v1/recycling/gelirler/bekleyen`
+- `POST /api/v1/recycling/gelirler/{id}/onayla`
+- `POST /api/v1/recycling/gelirler/{id}/reddet`
 
 Migrasyon olusturma:
 

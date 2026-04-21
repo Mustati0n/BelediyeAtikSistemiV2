@@ -173,10 +173,10 @@ async def test_salary_calculation_single_and_batch_payment(
     assert single_response.status_code == 200
     assert single_response.json()["odeme_tipi"] == OdemeTipi.AVANS.value
     assert batch_response.status_code == 200
-    assert batch_response.json()["kayit_sayisi"] == 4
+    assert batch_response.json()["kayit_sayisi"] == 5
 
     odemeler = list(db_session.scalars(select(MaasOdeme)))
-    assert len(odemeler) == 5
+    assert len(odemeler) == 6
 
 
 async def test_profit_loss_summary_and_pending_expense_listing(
