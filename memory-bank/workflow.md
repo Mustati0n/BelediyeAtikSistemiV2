@@ -77,21 +77,21 @@ Teslim: Ihbar + kritik konteyner -> gorev -> sofor rota -> sonuc akisi.
 
 ## Faz 5 - Bakim ve Muhasebe
 
-Durum: Siradaki
+Durum: Tamamlandi
 
-- [ ] Arac CRUD ve durum yonetimini yaz.
-- [ ] Bakim kaydi olusturma endpoint'ini yaz.
-- [ ] Bakimdan bekleyen gider kaydi uret.
-- [ ] Muhasebe gider onay/red endpoint'lerini yaz.
-- [ ] Maas hesaplama, tekli odeme ve avans endpoint'lerini yaz.
-- [ ] Toplu maas odemesi icin ayin 15'i kuralini ekle.
-- [ ] Kar/zarar raporu icin gelir-gider ozetini yaz.
+- [x] Arac CRUD ve durum yonetimini yaz.
+- [x] Bakim kaydi olusturma endpoint'ini yaz.
+- [x] Bakimdan bekleyen gider kaydi uret.
+- [x] Muhasebe gider onay/red endpoint'lerini yaz.
+- [x] Maas hesaplama, tekli odeme ve avans endpoint'lerini yaz.
+- [x] Toplu maas odemesi icin ayin 15'i kuralini ekle.
+- [x] Kar/zarar raporu icin gelir-gider ozetini yaz.
 
 Teslim: Bakim-gider onayi, maas odeme, finans raporu.
 
 ## Faz 6 - Tesis, Stok ve Satis
 
-Durum: Bekliyor
+Durum: Siradaki
 
 - [ ] Sofor tesise atik teslim endpoint'ini yaz.
 - [ ] Operator teslim alma akisini yaz.

@@ -2,7 +2,7 @@
 
 ## Durum Ozeti
 
-Faz 4 tamamlandi. Backend/API iskeleti ve domain modeli ustune JWT tabanli auth katmani ve gorev havuzu operasyon endpoint'leri kuruldu. Sonraki adim Faz 5: bakim ve muhasebe.
+Faz 5 tamamlandi. Backend/API iskeleti ve domain modeli ustune auth, gorev havuzu, bakim ve muhasebe endpoint'leri kuruldu. Sonraki adim Faz 6: tesis, stok ve satis.
 
 ## Tamamlananlar
 
@@ -62,17 +62,26 @@ Faz 4 tamamlandi. Backend/API iskeleti ve domain modeli ustune JWT tabanli auth 
 - [x] Sofor gorev baslatma ve sonuclandirma endpoint'leri eklendi.
 - [x] Operasyon/gorev havuzu testleri eklendi; backend test sayisi 13'e cikti ve hepsi gecti.
 - [x] Swagger ve test icin temel operasyon endpoint listesi dokumante edildi.
+- [x] Arac listeleme, olusturma ve guncelleme endpoint'leri eklendi.
+- [x] Bakim kaydi olusturma ve teknik tamamlama endpoint'leri eklendi.
+- [x] Bakim kaydindan bekleyen gider kaydi uretimi eklendi.
+- [x] Muhasebe bekleyen gider listeleme ve gider onay/red endpoint'leri eklendi.
+- [x] Maas hesaplama endpoint'i eklendi.
+- [x] Avans/tekli odeme ve toplu maas odemesi endpoint'leri eklendi.
+- [x] Toplu odemede ayin 15'i kuralı eklendi.
+- [x] Kar-zarar rapor ozeti endpoint'i eklendi.
+- [x] Bakim/muhasebe testleri eklendi; backend test sayisi 18'e cikti ve hepsi gecti.
 
 ## Devam Edenler
 
-- [ ] Faz 5 bakim ve muhasebe.
+- [ ] Faz 6 tesis, stok ve satis.
 
 ## Siradakiler
 
-- [ ] Arac CRUD ve durum yonetimi.
-- [ ] Bakim kaydi ve gider kaydi uretimi.
-- [ ] Muhasebe gider onay/red akisleri.
-- [ ] Maas, avans ve toplu odeme endpoint'leri.
+- [ ] Tesis teslim ve operator onay akisleri.
+- [ ] Ayristirma ve stok hareketleri.
+- [ ] Satis kaydi ve gelir kaydi uretimi.
+- [ ] Muhasebe gelir onay/red akisleri.
 - [ ] Vatandas ihbar portali.
 - [ ] PySide6 personel ekranlari.
 

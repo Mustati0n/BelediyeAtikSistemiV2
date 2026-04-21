@@ -100,3 +100,9 @@ memory-bank/
 - `.venv/bin/python -m ruff check backend`: gecti.
 - `.venv/bin/python -m pytest`: 13 test gecti.
 - `python3 -m compileall backend`: gecti.
+
+## Faz 5 Dogrulama
+
+- `.venv/bin/python -m ruff check backend`: gecti.
+- `.venv/bin/python -m pytest`: 18 test gecti.
+- `python3 -m compileall backend`: gecti.

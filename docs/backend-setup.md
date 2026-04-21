@@ -64,6 +64,18 @@ Bu asamada test etmek icin hazir temel endpoint gruplari:
 - `GET /api/v1/operations/sofor/gorevler/gunluk`
 - `POST /api/v1/operations/gorevler/{id}/baslat`
 - `POST /api/v1/operations/gorevler/{id}/sonuclandir`
+- `GET /api/v1/fleet/araclar`
+- `POST /api/v1/fleet/araclar`
+- `PATCH /api/v1/fleet/araclar/{id}`
+- `POST /api/v1/maintenance/bakim-kayitlari`
+- `POST /api/v1/maintenance/bakim-kayitlari/{id}/teknik-tamamla`
+- `GET /api/v1/finance/giderler/bekleyen`
+- `POST /api/v1/finance/giderler/{id}/onayla`
+- `POST /api/v1/finance/giderler/{id}/reddet`
+- `GET /api/v1/finance/maas/personeller/{id}/hesapla`
+- `POST /api/v1/finance/maas/tekli`
+- `POST /api/v1/finance/maas/toplu`
+- `GET /api/v1/finance/raporlar/kar-zarar`
 
 Migrasyon olusturma:
 

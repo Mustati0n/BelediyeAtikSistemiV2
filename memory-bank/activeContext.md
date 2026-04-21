@@ -2,7 +2,7 @@
 
 ## Guncel Odak
 
-Git/GitHub akisi, Faz 1 backend iskeleti, Faz 2 domain modeli, Faz 3 auth/RBAC/audit temeli ve Faz 4 operasyon/gorev havuzu temeli tamamlandi. Sonraki adim Faz 5 kapsaminda bakim ve muhasebe akislarini API seviyesinde kurmak olacak.
+Git/GitHub akisi, Faz 1 backend iskeleti, Faz 2 domain modeli, Faz 3 auth/RBAC/audit temeli, Faz 4 operasyon/gorev havuzu temeli ve Faz 5 bakim/muhasebe temeli tamamlandi. Sonraki adim Faz 6 kapsaminda tesis, stok ve satis akislarini API seviyesinde kurmak olacak.
 
 ## Son Degisiklikler
 
@@ -46,6 +46,13 @@ Git/GitHub akisi, Faz 1 backend iskeleti, Faz 2 domain modeli, Faz 3 auth/RBAC/a
 - Sofor icin gunluk gorev listeleme, gorev baslatma ve gorev sonuclandirma endpoint'leri eklendi.
 - Gorev sonuclari ihbar ve konteyner durumlarini guncelleyecek sekilde baglandi.
 - Operasyon testleri eklendi; toplam backend test sayisi 13 oldu ve hepsi gecti.
+- Arac yonetimi icin `fleet` modulu eklendi; arac listeleme, olusturma ve guncelleme endpoint'leri yazildi.
+- Bakim kaydi acildiginda arac durumu `Bakimda` olacak ve ayni islemde `GiderKaydi` olusacak sekilde servis katmani eklendi.
+- Teknik bakim tamamlama endpoint'i eklendi; bu adim araci tekrar `Aktif` yapar ancak gider onayi ayrik kalir.
+- Muhasebe icin bekleyen gider listeleme ve gider onay/red endpoint'leri eklendi.
+- Maas hesaplama, avans/tekli odeme, toplu maas odemesi ve kar-zarar ozet endpoint'leri eklendi.
+- Toplu maas odemesine ayin 15'i kuralı servis katmaninda eklendi.
+- Bakim/finans testleri eklendi; toplam backend test sayisi 18 oldu ve hepsi gecti.
 
 ## Aktif Kararlar
 
@@ -66,6 +73,7 @@ Git/GitHub akisi, Faz 1 backend iskeleti, Faz 2 domain modeli, Faz 3 auth/RBAC/a
 - Demo seed kullanicilari proje ici gelistirme amacli tutulacak; sifreleri `.env` ile degistirilebilir olacak.
 - Gecici gosterim ekranlari veya demo endpoint'leri asil is kurallarindan ayrik tutulacak; arkadasin frontend'i geldiginde backend'i yeniden yazma ihtiyaci olmadan entegrasyon yapilacak.
 - Operasyon tarafinda test ve demo ihtiyaci icin public/report ve role-protected endpoint'ler kuruldu; bunlar kalici API sozlesmesinin parcasi olarak tasarlandi.
+- Bakim teknik tamamlanmasi ile gider onayi ayrik akislarda tutuluyor; testle de dogrulandi.
 
 ## Dikkat Edilecek Noktalar
 
@@ -76,4 +84,4 @@ Git/GitHub akisi, Faz 1 backend iskeleti, Faz 2 domain modeli, Faz 3 auth/RBAC/a
 
 ## Sonraki Adim
 
-Faz 5'e gecilecek: arac CRUD, bakim kaydi, bakimdan gider kaydi uretimi, muhasebe gider onay/red akisi, maas/avans/tekli/toplu odeme endpoint'leri ve gelir-gider ozetleri.
+Faz 6'ya gecilecek: soforun tesis teslim endpoint'i, operator teslim alma, ayristirma ve stok hareketleri, stok goruntuleme, satis kaydi ve gelir onay akisleri.

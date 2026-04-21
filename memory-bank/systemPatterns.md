@@ -81,6 +81,16 @@ Operasyonel islem finansal kaydi dogrudan kesinlestirmez.
 - Muhasebe onayi sonrasi durum `Onaylandi` veya `Reddedildi` olur.
 - Onaylanan kayitlar raporlamaya dahil edilir.
 
+Mevcut uygulama durumu:
+
+- `POST /api/v1/maintenance/bakim-kayitlari` bakim kaydi ile birlikte bekleyen `GiderKaydi` uretir.
+- `POST /api/v1/maintenance/bakim-kayitlari/{id}/teknik-tamamla` araci teknik olarak tekrar aktif hale getirir.
+- `GET /api/v1/finance/giderler/bekleyen`, `.../onayla` ve `.../reddet` muhasebe akislarini yurutur.
+- `GET /api/v1/finance/maas/personeller/{id}/hesapla` maas hesap ozeti dondurur.
+- `POST /api/v1/finance/maas/tekli` avans ve tekli odemeleri alir.
+- `POST /api/v1/finance/maas/toplu` ayin 15'i kuralini uygular.
+- `GET /api/v1/finance/raporlar/kar-zarar` onayli gelir/gider ozetini dondurur.
+
 ## RBAC Deseni
 
 - Her personel bir role baglanir.
