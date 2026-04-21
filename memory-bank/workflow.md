@@ -63,21 +63,21 @@ Teslim: Rol bazli login, korunmus endpoint ornegi, audit log kaydi.
 
 ## Faz 4 - Operasyon ve Gorev Havuzu
 
-Durum: Siradaki
+Durum: Tamamlandi
 
-- [ ] Vatandas ihbari API'sini yaz.
-- [ ] Ihbardan gorev olusturma kuralini ekle.
-- [ ] Konteyner doluluk guncelleme servisini yaz.
-- [ ] Kritik konteynerden gorev olusturma kuralini ekle.
-- [ ] Ayni konteyner icin tekrar acik gorev olusmasini engelle.
-- [ ] Gunluk gorev listesi ve basit rota siralama endpoint'ini yaz.
-- [ ] Gorev baslatma ve sonuclandirma endpoint'lerini yaz.
+- [x] Vatandas ihbari API'sini yaz.
+- [x] Ihbardan gorev olusturma kuralini ekle.
+- [x] Konteyner doluluk guncelleme servisini yaz.
+- [x] Kritik konteynerden gorev olusturma kuralini ekle.
+- [x] Ayni konteyner icin tekrar acik gorev olusmasini engelle.
+- [x] Gunluk gorev listesi ve basit rota siralama endpoint'ini yaz.
+- [x] Gorev baslatma ve sonuclandirma endpoint'lerini yaz.
 
 Teslim: Ihbar + kritik konteyner -> gorev -> sofor rota -> sonuc akisi.
 
 ## Faz 5 - Bakim ve Muhasebe
 
-Durum: Bekliyor
+Durum: Siradaki
 
 - [ ] Arac CRUD ve durum yonetimini yaz.
 - [ ] Bakim kaydi olusturma endpoint'ini yaz.

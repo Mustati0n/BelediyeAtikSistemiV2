@@ -2,7 +2,7 @@
 
 ## Durum Ozeti
 
-Faz 3 tamamlandi. Backend/API iskeleti ve domain modeli ustune JWT tabanli auth, rol bazli endpoint korumasi, audit log servisi ve demo seed altyapisi kuruldu. Sonraki adim Faz 4: operasyon ve gorev havuzu.
+Faz 4 tamamlandi. Backend/API iskeleti ve domain modeli ustune JWT tabanli auth katmani ve gorev havuzu operasyon endpoint'leri kuruldu. Sonraki adim Faz 5: bakim ve muhasebe.
 
 ## Tamamlananlar
 
@@ -53,16 +53,26 @@ Faz 3 tamamlandi. Backend/API iskeleti ve domain modeli ustune JWT tabanli auth,
 - [x] `.env.example` seed sifre ayarlariyla guncellendi.
 - [x] Auth/RBAC testleri eklendi; backend test sayisi 9'a cikti ve hepsi gecti.
 - [x] Gercek PostgreSQL veritabaninda seed komutu calistirildi.
+- [x] Vatandas ihbari icin public endpoint yazildi.
+- [x] Ihbardan otomatik gorev olusturma akisi eklendi.
+- [x] Konteyner doluluk guncelleme ve kritik gorev uretme servisi eklendi.
+- [x] Ayni konteyner icin tekrar acik gorev olusmasini engelleyen kontrol eklendi.
+- [x] Sistem yoneticisi icin gorev atama endpoint'i eklendi.
+- [x] Sofor gunluk gorev listeleme endpoint'i eklendi.
+- [x] Sofor gorev baslatma ve sonuclandirma endpoint'leri eklendi.
+- [x] Operasyon/gorev havuzu testleri eklendi; backend test sayisi 13'e cikti ve hepsi gecti.
+- [x] Swagger ve test icin temel operasyon endpoint listesi dokumante edildi.
 
 ## Devam Edenler
 
-- [ ] Faz 4 operasyon ve gorev havuzu.
+- [ ] Faz 5 bakim ve muhasebe.
 
 ## Siradakiler
 
-- [ ] Vatandas ihbari API'si ve testleri.
-- [ ] Ihbar/kritik konteynerden gorev olusturma kurallari.
-- [ ] Sofor gorev listeleme, baslatma ve sonuclandirma endpoint'leri.
+- [ ] Arac CRUD ve durum yonetimi.
+- [ ] Bakim kaydi ve gider kaydi uretimi.
+- [ ] Muhasebe gider onay/red akisleri.
+- [ ] Maas, avans ve toplu odeme endpoint'leri.
 - [ ] Vatandas ihbar portali.
 - [ ] PySide6 personel ekranlari.
 

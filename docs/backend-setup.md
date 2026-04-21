@@ -48,6 +48,23 @@ Demo roller ve kullanicilar:
 python -m backend.app.db.seed
 ```
 
+Swagger dokumantasyonu:
+
+```bash
+/api/v1/docs
+```
+
+Bu asamada test etmek icin hazir temel endpoint gruplari:
+
+- `POST /api/v1/auth/login`
+- `GET /api/v1/auth/me`
+- `POST /api/v1/public/ihbarlar`
+- `POST /api/v1/operations/konteynerler/{id}/doluluk`
+- `POST /api/v1/operations/gorevler/{id}/ata`
+- `GET /api/v1/operations/sofor/gorevler/gunluk`
+- `POST /api/v1/operations/gorevler/{id}/baslat`
+- `POST /api/v1/operations/gorevler/{id}/sonuclandir`
+
 Migrasyon olusturma:
 
 ```bash

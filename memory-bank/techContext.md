@@ -53,6 +53,7 @@ memory-bank/
 - Backend response'lari ekranlarda kullanilacak baslik, durum, tarih, tutar, iliskili varlik ozeti gibi bilgileri dogrudan tasiyacak.
 - Pydantic schema'lari frontend icin sozlesme kabul edilecek.
 - Backend servisleri UI framework'unden bagimsiz olacak; PySide6, Jinja2 veya ileride React/Vue gibi bir frontend ayni API'yi kullanabilecek.
+- Gosterim icin eklenen gecici UI veya test ekranlari cekirdek servis katmanindan bagimsiz bir adapter olarak yazilacak; sonradan silinmesi backend akisini bozmamali.
 
 ## Teknik Kisitlar
 
@@ -93,3 +94,9 @@ memory-bank/
 - `.venv/bin/python -m pytest`: 9 test gecti.
 - `python3 -m compileall backend`: gecti.
 - `.venv/bin/python -m backend.app.db.seed`: gecti.
+
+## Faz 4 Dogrulama
+
+- `.venv/bin/python -m ruff check backend`: gecti.
+- `.venv/bin/python -m pytest`: 13 test gecti.
+- `python3 -m compileall backend`: gecti.

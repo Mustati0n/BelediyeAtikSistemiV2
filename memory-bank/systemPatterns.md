@@ -15,6 +15,12 @@ Frontend ve masaustu ekranlari sonraki fazlarda eklenecegi icin backend once API
 - Detay endpoint'lerinde UI'nin tekrar sorgu yapmak zorunda kalmayacagi iliskili ozet bilgiler.
 - Aksiyon endpoint'lerinde durum gecislerini servis katmaninda toplayan tek sorumluluklu fonksiyonlar.
 
+Gecici gosterim/desen kuralı:
+
+- Demo amacli UI, ornek ekran veya test paneli eklenirse bu katman yalnizca API istemcisi gibi davranacak.
+- Is kurallari endpoint icine gomulmeyecek; servis katmani kalici entegrasyon noktasi olacak.
+- Gecici arayuz silindiginde backend, testler ve API sozlesmesi ayakta kalmali.
+
 ## Domain Omurgasi
 
 Ana varliklar:
@@ -54,6 +60,15 @@ Uygulama durumu:
 - Gorev durumlari: `Bekliyor`, `Atandi`, `Islemde`, `Tamamlandi`, `Basarisiz`.
 - Gorev sonucu sadece sonuc girildikten sonra dolu olmalidir.
 - Ayni konteyner icin acik kritik gorev varken yeni gorev olusmamali.
+
+Mevcut uygulama durumu:
+
+- `POST /api/v1/public/ihbarlar` vatandas ihbarini alir ve ayni islemde `Gorev` uretir.
+- `POST /api/v1/operations/konteynerler/{id}/doluluk` kritik esik gecildiginde gorev uretir.
+- `POST /api/v1/operations/gorevler/{id}/ata` ile yonetici sofor ve arac atayabilir.
+- `GET /api/v1/operations/sofor/gorevler/gunluk` atanan gorevleri sira ve oncelige gore listeler.
+- `POST /api/v1/operations/gorevler/{id}/baslat` ve `.../sonuclandir` ile sofor durum gecislerini yapar.
+- Gorev sonucu `Ihbar` ve `Konteyner` durumlarini servis katmaninda gunceller.
 
 ## Finansal Onay Deseni
 

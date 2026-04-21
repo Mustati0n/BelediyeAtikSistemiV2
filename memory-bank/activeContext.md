@@ -2,7 +2,7 @@
 
 ## Guncel Odak
 
-Git/GitHub akisi, Faz 1 backend iskeleti, Faz 2 domain modeli ve Faz 3 auth/RBAC/audit temeli tamamlandi. Sonraki adim Faz 4 kapsaminda vatandas ihbari, gorev havuzu ve sofor operasyon akisini API seviyesinde kurmak olacak.
+Git/GitHub akisi, Faz 1 backend iskeleti, Faz 2 domain modeli, Faz 3 auth/RBAC/audit temeli ve Faz 4 operasyon/gorev havuzu temeli tamamlandi. Sonraki adim Faz 5 kapsaminda bakim ve muhasebe akislarini API seviyesinde kurmak olacak.
 
 ## Son Degisiklikler
 
@@ -38,6 +38,14 @@ Git/GitHub akisi, Faz 1 backend iskeleti, Faz 2 domain modeli ve Faz 3 auth/RBAC
 - Roller ve demo personeller icin seed betigi eklendi: `python -m backend.app.db.seed`.
 - Auth/RBAC testleri eklendi; toplam backend test sayisi 9 oldu ve hepsi gecti.
 - Gercek PostgreSQL veritabaninda seed komutu calistirildi.
+- Vatandas ihbari icin public endpoint eklendi: `POST /api/v1/public/ihbarlar`.
+- Ihbar olusunca otomatik `Gorev` kaydi ureten servis katmani yazildi.
+- Konteyner doluluk guncelleme ve kritik seviyede gorev olusturma akisi eklendi.
+- Ayni konteyner icin acik gorev varsa ikinci kritik gorev olusmasini engelleyen kontrol servis katmanina eklendi.
+- Sistem yoneticisi icin gorev atama endpoint'i eklendi.
+- Sofor icin gunluk gorev listeleme, gorev baslatma ve gorev sonuclandirma endpoint'leri eklendi.
+- Gorev sonuclari ihbar ve konteyner durumlarini guncelleyecek sekilde baglandi.
+- Operasyon testleri eklendi; toplam backend test sayisi 13 oldu ve hepsi gecti.
 
 ## Aktif Kararlar
 
@@ -47,6 +55,7 @@ Git/GitHub akisi, Faz 1 backend iskeleti, Faz 2 domain modeli ve Faz 3 auth/RBAC
 - Backend FastAPI, ORM SQLAlchemy 2.0, veritabani PostgreSQL, personel masaustu ekranlari PySide6 olacak.
 - PostgreSQL Docker Compose ile ayaga kaldirilacak.
 - Frontend sonradan eklenecek; backend once API sozlesmesi, Pydantic schema'lari ve UI dostu response yapilariyla kurulacak.
+- Sistem moduler tutulacak; backend, servis katmani ve schema sozlesmeleri kalici olacak, gosterim icin gerekirse gecici/demo UI katmani kolayca sokulebilir sekilde eklenecek.
 - Vatandas portali FastAPI + Jinja2 ile hafif web katmani olarak daha sonraki fazda baslatilacak.
 - Bakim kaydi olustugunda muhasebeye bekleyen gider kaydi hemen duser; ancak fiziksel bakim tamamlanmasi muhasebe onayindan ayridir.
 - Satis MVP'de dogrudan yapilabilir olacak; stok satis aninda duser, gelir kaydi muhasebe raporlama/onay akisi icin olusur. Stok rezervasyon/geri alma detayi simdilik eklenmeyecek.
@@ -55,6 +64,8 @@ Git/GitHub akisi, Faz 1 backend iskeleti, Faz 2 domain modeli ve Faz 3 auth/RBAC
 - Login akisi ilk asamada OAuth2 password form (`username` alaninda email veya TC no) ile calisacak.
 - JWT icinde kullanici kimligi `sub` alaninda tutulacak; rol bilgisi DB'den yuklenerek yetki kontrolu yapilacak.
 - Demo seed kullanicilari proje ici gelistirme amacli tutulacak; sifreleri `.env` ile degistirilebilir olacak.
+- Gecici gosterim ekranlari veya demo endpoint'leri asil is kurallarindan ayrik tutulacak; arkadasin frontend'i geldiginde backend'i yeniden yazma ihtiyaci olmadan entegrasyon yapilacak.
+- Operasyon tarafinda test ve demo ihtiyaci icin public/report ve role-protected endpoint'ler kuruldu; bunlar kalici API sozlesmesinin parcasi olarak tasarlandi.
 
 ## Dikkat Edilecek Noktalar
 
@@ -65,4 +76,4 @@ Git/GitHub akisi, Faz 1 backend iskeleti, Faz 2 domain modeli ve Faz 3 auth/RBAC
 
 ## Sonraki Adim
 
-Faz 4'e gecilecek: vatandas ihbar endpoint'i, ihbardan gorev uretme kuralı, kritik konteyner gorev olusumu, tekrar acik gorev engeli ve sofor gunluk gorev listeleme/baslatma/sonuclandirma akisi.
+Faz 5'e gecilecek: arac CRUD, bakim kaydi, bakimdan gider kaydi uretimi, muhasebe gider onay/red akisi, maas/avans/tekli/toplu odeme endpoint'leri ve gelir-gider ozetleri.
