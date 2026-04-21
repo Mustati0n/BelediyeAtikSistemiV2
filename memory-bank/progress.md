@@ -2,7 +2,7 @@
 
 ## Durum Ozeti
 
-Faz 1 tamamlandi. Backend/API iskeleti, FastAPI health endpoint, SQLAlchemy oturum altyapisi, Alembic migrasyon ortami, Docker Compose PostgreSQL tanimi, `.env.example`, Python paket tanimi ve test altyapisi kuruldu. Sonraki adim Faz 2: domain modelleri ve veritabani semasi.
+Faz 2 tamamlandi. Backend/API iskeleti ustune tam domain modeli, SQLAlchemy iliskileri, enumlar, ilk Alembic migration ve PostgreSQL semasi kuruldu. Sonraki adim Faz 3: auth, RBAC ve audit altyapisi.
 
 ## Tamamlananlar
 
@@ -38,14 +38,20 @@ Faz 1 tamamlandi. Backend/API iskeleti, FastAPI health endpoint, SQLAlchemy otur
 - [x] API-first klasor ayrimi, base schema ve servis katmani yerleri eklendi.
 - [x] Sanal ortamda bagimlilik kurulumu dogrulandi.
 - [x] Test, lint, compile ve compose config kontrolleri yapildi.
+- [x] Tum domain enumlari eklendi.
+- [x] SQLAlchemy domain modelleri ve iliskiler yazildi.
+- [x] Check constraint, unique constraint, index ve nullable kararları modellere islendi.
+- [x] Ilk Alembic migration olusturuldu: `00f31c245a1a_create_initial_schema.py`.
+- [x] `alembic upgrade head` ile veritabani semasi olusturuldu.
+- [x] `alembic check` ile model ve migration senkronu dogrulandi.
+- [x] Backend test sayisi 5'e cikti ve hepsi gecti.
 
 ## Devam Edenler
 
-- [ ] Faz 2 domain modeli ve veritabani semasi.
+- [ ] Faz 3 auth, RBAC ve audit altyapisi.
 
 ## Siradakiler
 
-- [ ] Backend domain modellerinin yazilmasi.
 - [ ] Auth/RBAC altyapisinin kurulmasi.
 - [ ] Ilk API endpoint'leri ve testleri.
 - [ ] Vatandas ihbar portali.
@@ -55,5 +61,6 @@ Faz 1 tamamlandi. Backend/API iskeleti, FastAPI health endpoint, SQLAlchemy otur
 
 - Python 3.14 ortaminda `fastapi.testclient.TestClient` ile ilk health testi askida kaldi; Faz 1 testi simdilik handler/app sozlesmesi uzerinden dogrulandi. Uygulama gelistikce ASGI/HTTP test yaklasimi tekrar degerlendirilecek.
 - Tesis/stok/satis sequence diyagraminin PlantUML kodu raporda yok; uygulama oncesi yeniden yazilmasi iyi olur.
+- `MaasOdeme` icin `personel + donem + odeme_tipi` unique constraint DB seviyesinde tanimli; avans icin coklu odeme ihtiyaci dogarsa bu kural yeniden ele alinabilir.
 - Masaustu harita gosterimi icin PySide6 tarafinda teknik secim net degil; ilk MVP'de gorev listesi + koordinat ile ilerlenebilir.
 - Satisin dogrudan yapilmasi stok rezervasyon/geri alma detayini disarida birakir; sonraki versiyonda gerekirse genisletilecek.

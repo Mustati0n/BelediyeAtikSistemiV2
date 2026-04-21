@@ -34,23 +34,23 @@ Teslim: Calisan bos API, health endpoint, test komutu, migrasyon altyapisi.
 
 ## Faz 2 - Domain Modeli ve Veritabani
 
-Durum: Siradaki
+Durum: Tamamlandi
 
-- [ ] Enumlari tanimla.
-- [ ] Rol ve Personel modelini yaz.
-- [ ] Bolge, Konteyner, Ihbar ve Gorev modelini yaz.
-- [ ] Arac ve BakimKaydi modelini yaz.
-- [ ] MaasOdeme, GiderKaydi, GelirKaydi modelini yaz.
-- [ ] TesisTeslim, Stok, StokHareketi ve Satis modelini yaz.
-- [ ] IslemLog ve SistemParametresi modelini yaz.
-- [ ] Iliskileri, benzersizlikleri ve nullable kurallarini netlestir.
-- [ ] Ilk migrasyonu uret ve uygula.
+- [x] Enumlari tanimla.
+- [x] Rol ve Personel modelini yaz.
+- [x] Bolge, Konteyner, Ihbar ve Gorev modelini yaz.
+- [x] Arac ve BakimKaydi modelini yaz.
+- [x] MaasOdeme, GiderKaydi, GelirKaydi modelini yaz.
+- [x] TesisTeslim, Stok, StokHareketi ve Satis modelini yaz.
+- [x] IslemLog ve SistemParametresi modelini yaz.
+- [x] Iliskileri, benzersizlikleri ve nullable kurallarini netlestir.
+- [x] Ilk migrasyonu uret ve uygula.
 
 Teslim: Veritabani semasi, migrasyon, model testleri.
 
 ## Faz 3 - Auth, RBAC ve Audit
 
-Durum: Bekliyor
+Durum: Siradaki
 
 - [ ] Sifre hashleme altyapisini ekle.
 - [ ] JWT login endpoint'ini yaz.

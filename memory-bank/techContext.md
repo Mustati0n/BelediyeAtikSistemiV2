@@ -16,7 +16,7 @@
 ## Gelistirme Ortami
 
 - CWD: `/home/mustati0n/code-blocks/BelediyeAtikSistemi`
-- Sistem tarihi: 2026-04-15
+- Son dogrulanan sistem tarihi: 2026-04-21
 - Zaman dilimi: Europe/Istanbul
 - Repo su an iskeletsiz; proje yapisi kurulacak.
 - Git deposu kullanilacak; yerel commit'ler proje fazlarina gore atilacak. Push islemi yalnizca uzak repo tanimlandiktan sonra yapilabilir.
@@ -74,3 +74,13 @@ memory-bank/
 - `.venv/bin/python -m ruff check .`: gecti.
 - `python3 -m compileall backend`: gecti.
 - `docker compose config`: gecti.
+
+## Faz 2 Dogrulama
+
+- `.venv/bin/python -m pytest`: 5 test gecti.
+- `.venv/bin/python -m ruff check backend`: gecti.
+- `python3 -m compileall backend`: gecti.
+- `.venv/bin/alembic revision --autogenerate -m "create initial schema"`: gecti.
+- `.venv/bin/alembic upgrade head`: gecti.
+- `.venv/bin/alembic current`: `00f31c245a1a (head)`.
+- `.venv/bin/alembic check`: `No new upgrade operations detected.`

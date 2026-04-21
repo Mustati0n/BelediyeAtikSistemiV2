@@ -37,6 +37,14 @@ Ana varliklar:
 - `IslemLog`
 - Sistem parametreleri icin ek tablo gerekecek: `SistemParametresi`
 
+Uygulama durumu:
+
+- Faz 2'de bu varliklarin ilk SQLAlchemy modelleri yazildi.
+- Ilk migration olusturuldu ve PostgreSQL'e uygulandi.
+- `Gorev` icin tek kaynak constraint'i DB seviyesinde tanimlandi: ya `ihbar_id` ya `konteyner_id`.
+- `MaasOdeme` icin `personel + donem_ay + donem_yil + odeme_tipi` unique constraint'i eklendi.
+- `GiderKaydi` ve `GelirKaydi` kaynak kayitlariyla bire bir iliski olacak sekilde unique foreign key ile tasarlandi.
+
 ## Gorev Havuzu Deseni
 
 `Gorev`, operasyonun merkezi kaydidir.

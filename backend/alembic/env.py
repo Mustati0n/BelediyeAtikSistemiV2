@@ -5,6 +5,7 @@ from sqlalchemy import engine_from_config, pool
 
 from backend.app.core.config import settings
 from backend.app.db.base import Base
+from backend.app.models import *  # noqa: F403
 
 config = context.config
 config.set_main_option("sqlalchemy.url", settings.database_url)
@@ -45,4 +46,3 @@ if context.is_offline_mode():
     run_migrations_offline()
 else:
     run_migrations_online()
-

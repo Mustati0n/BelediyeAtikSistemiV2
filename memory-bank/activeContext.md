@@ -2,7 +2,7 @@
 
 ## Guncel Odak
 
-Proje hafizasi kuruldu, kullanici ilk teknik kararları onayladi, Git/GitHub akisi tamamlandi ve Faz 1 backend iskeleti kuruldu. Sonraki adim Faz 2 kapsaminda domain modelleri, enumlar, iliskiler ve ilk veritabani semasini kurmak olacak.
+Git/GitHub akisi, Faz 1 backend iskeleti ve Faz 2 domain modeli tamamlandi. Sonraki adim Faz 3 kapsaminda auth, RBAC, sifreleme, JWT login ve audit log akisini kurmak olacak.
 
 ## Son Degisiklikler
 
@@ -26,6 +26,11 @@ Proje hafizasi kuruldu, kullanici ilk teknik kararları onayladi, Git/GitHub aki
 - Bagimlilikler `.venv` icine kuruldu.
 - Dogrulama: `pytest` 2 test geçti, `ruff check .` geçti, `python3 -m compileall backend` geçti, `docker compose config` geçti.
 - Python 3.14 ortaminda `TestClient` tabanli ilk test askida kaldigi icin health testi simdilik handler/app sozlesmesi uzerinden yazildi.
+- Faz 2 domain modelleri eklendi: enumlar, `Personel`, `Rol`, `Bolge`, `Konteyner`, `Ihbar`, `Gorev`, `Arac`, `BakimKaydi`, `MaasOdeme`, `GiderKaydi`, `GelirKaydi`, `TesisTeslim`, `Stok`, `StokHareketi`, `Satis`, `IslemLog`, `SistemParametresi`.
+- SQLAlchemy iliskileri, check constraint'ler, index'ler ve nullability kurallari modellere islendi.
+- Alembic autogenerate ile ilk migration olusturuldu: `00f31c245a1a_create_initial_schema.py`.
+- `alembic upgrade head` uygulandi ve `alembic check` ile model-DB senkronu dogrulandi.
+- Toplam test sayisi 5 oldu; hepsi gecti.
 
 ## Aktif Kararlar
 
@@ -50,4 +55,4 @@ Proje hafizasi kuruldu, kullanici ilk teknik kararları onayladi, Git/GitHub aki
 
 ## Sonraki Adim
 
-Faz 2'ye gecilecek: enumlar, SQLAlchemy domain modelleri, foreign key iliskileri, nullability kararları, ilk Alembic migration ve model testleri.
+Faz 3'e gecilecek: sifre hashleme, JWT token uretimi, login endpoint'i, rol bazli endpoint korumasi, seed roller/personeller ve audit log servis temeli.
