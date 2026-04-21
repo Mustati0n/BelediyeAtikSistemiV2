@@ -50,20 +50,20 @@ Teslim: Veritabani semasi, migrasyon, model testleri.
 
 ## Faz 3 - Auth, RBAC ve Audit
 
-Durum: Siradaki
+Durum: Tamamlandi
 
-- [ ] Sifre hashleme altyapisini ekle.
-- [ ] JWT login endpoint'ini yaz.
-- [ ] Rol bazli endpoint korumasini kur.
-- [ ] Seed roller ve demo personeller ekle.
-- [ ] Audit log servis katmanini ekle.
-- [ ] Kritik islemler icin log yazma desenini yerleştir.
+- [x] Sifre hashleme altyapisini ekle.
+- [x] JWT login endpoint'ini yaz.
+- [x] Rol bazli endpoint korumasini kur.
+- [x] Seed roller ve demo personeller ekle.
+- [x] Audit log servis katmanini ekle.
+- [x] Kritik islemler icin log yazma desenini yerlestir.
 
 Teslim: Rol bazli login, korunmus endpoint ornegi, audit log kaydi.
 
 ## Faz 4 - Operasyon ve Gorev Havuzu
 
-Durum: Bekliyor
+Durum: Siradaki
 
 - [ ] Vatandas ihbari API'sini yaz.
 - [ ] Ihbardan gorev olusturma kuralini ekle.

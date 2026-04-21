@@ -20,6 +20,11 @@ class Settings(BaseSettings):
     jwt_secret_key: str = "change-this-development-secret"
     jwt_algorithm: str = "HS256"
     access_token_expire_minutes: int = 60
+    seed_admin_password: str = "Admin123!"
+    seed_muhasebe_password: str = "Muhasebe123!"
+    seed_bakim_password: str = "Bakim123!"
+    seed_sofor_password: str = "Sofor123!"
+    seed_operator_password: str = "Operator123!"
 
     @field_validator("debug", mode="before")
     @classmethod

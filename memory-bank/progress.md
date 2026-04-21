@@ -2,7 +2,7 @@
 
 ## Durum Ozeti
 
-Faz 2 tamamlandi. Backend/API iskeleti ustune tam domain modeli, SQLAlchemy iliskileri, enumlar, ilk Alembic migration ve PostgreSQL semasi kuruldu. Sonraki adim Faz 3: auth, RBAC ve audit altyapisi.
+Faz 3 tamamlandi. Backend/API iskeleti ve domain modeli ustune JWT tabanli auth, rol bazli endpoint korumasi, audit log servisi ve demo seed altyapisi kuruldu. Sonraki adim Faz 4: operasyon ve gorev havuzu.
 
 ## Tamamlananlar
 
@@ -45,21 +45,31 @@ Faz 2 tamamlandi. Backend/API iskeleti ustune tam domain modeli, SQLAlchemy ilis
 - [x] `alembic upgrade head` ile veritabani semasi olusturuldu.
 - [x] `alembic check` ile model ve migration senkronu dogrulandi.
 - [x] Backend test sayisi 5'e cikti ve hepsi gecti.
+- [x] JWT tabanli sifreleme ve token uretim altyapisi eklendi.
+- [x] `POST /api/v1/auth/login`, `GET /api/v1/auth/me` ve `GET /api/v1/auth/admin-check` endpoint'leri yazildi.
+- [x] Rol bazli endpoint koruma dependency'leri eklendi.
+- [x] Login islemi icin audit log yazimi eklendi.
+- [x] Roller ve demo personeller icin seed betigi yazildi.
+- [x] `.env.example` seed sifre ayarlariyla guncellendi.
+- [x] Auth/RBAC testleri eklendi; backend test sayisi 9'a cikti ve hepsi gecti.
+- [x] Gercek PostgreSQL veritabaninda seed komutu calistirildi.
 
 ## Devam Edenler
 
-- [ ] Faz 3 auth, RBAC ve audit altyapisi.
+- [ ] Faz 4 operasyon ve gorev havuzu.
 
 ## Siradakiler
 
-- [ ] Auth/RBAC altyapisinin kurulmasi.
-- [ ] Ilk API endpoint'leri ve testleri.
+- [ ] Vatandas ihbari API'si ve testleri.
+- [ ] Ihbar/kritik konteynerden gorev olusturma kurallari.
+- [ ] Sofor gorev listeleme, baslatma ve sonuclandirma endpoint'leri.
 - [ ] Vatandas ihbar portali.
 - [ ] PySide6 personel ekranlari.
 
 ## Bilinen Riskler
 
 - Python 3.14 ortaminda `fastapi.testclient.TestClient` ile ilk health testi askida kaldi; Faz 1 testi simdilik handler/app sozlesmesi uzerinden dogrulandi. Uygulama gelistikce ASGI/HTTP test yaklasimi tekrar degerlendirilecek.
+- Python 3.14 ortaminda `passlib+bcrypt` uyumsuzlugu goruldu; sifre hashleme `pbkdf2_sha256` ile kurulup test edildi.
 - Tesis/stok/satis sequence diyagraminin PlantUML kodu raporda yok; uygulama oncesi yeniden yazilmasi iyi olur.
 - `MaasOdeme` icin `personel + donem + odeme_tipi` unique constraint DB seviyesinde tanimli; avans icin coklu odeme ihtiyaci dogarsa bu kural yeniden ele alinabilir.
 - Masaustu harita gosterimi icin PySide6 tarafinda teknik secim net degil; ilk MVP'de gorev listesi + koordinat ile ilerlenebilir.

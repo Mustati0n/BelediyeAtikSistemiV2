@@ -42,6 +42,12 @@ Test:
 pytest
 ```
 
+Demo roller ve kullanicilar:
+
+```bash
+python -m backend.app.db.seed
+```
+
 Migrasyon olusturma:
 
 ```bash

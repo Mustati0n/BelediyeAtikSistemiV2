@@ -2,7 +2,7 @@
 
 ## Guncel Odak
 
-Git/GitHub akisi, Faz 1 backend iskeleti ve Faz 2 domain modeli tamamlandi. Sonraki adim Faz 3 kapsaminda auth, RBAC, sifreleme, JWT login ve audit log akisini kurmak olacak.
+Git/GitHub akisi, Faz 1 backend iskeleti, Faz 2 domain modeli ve Faz 3 auth/RBAC/audit temeli tamamlandi. Sonraki adim Faz 4 kapsaminda vatandas ihbari, gorev havuzu ve sofor operasyon akisini API seviyesinde kurmak olacak.
 
 ## Son Degisiklikler
 
@@ -31,6 +31,13 @@ Git/GitHub akisi, Faz 1 backend iskeleti ve Faz 2 domain modeli tamamlandi. Sonr
 - Alembic autogenerate ile ilk migration olusturuldu: `00f31c245a1a_create_initial_schema.py`.
 - `alembic upgrade head` uygulandi ve `alembic check` ile model-DB senkronu dogrulandi.
 - Toplam test sayisi 5 oldu; hepsi gecti.
+- JWT tabanli auth katmani eklendi; `POST /api/v1/auth/login`, `GET /api/v1/auth/me` ve `GET /api/v1/auth/admin-check` endpoint'leri yazildi.
+- `OAuth2PasswordBearer` tabanli mevcut kullanici ve rol kontrol dependency'leri eklendi.
+- Sifre hashleme `pbkdf2_sha256` ile kuruldu; Python 3.14 ortaminda `passlib+bcrypt` uyumsuzlugu yuzunden bu yontem secildi.
+- Audit servis katmani eklendi ve login islemi `IslemLog` tablosuna yazilacak sekilde baglandi.
+- Roller ve demo personeller icin seed betigi eklendi: `python -m backend.app.db.seed`.
+- Auth/RBAC testleri eklendi; toplam backend test sayisi 9 oldu ve hepsi gecti.
+- Gercek PostgreSQL veritabaninda seed komutu calistirildi.
 
 ## Aktif Kararlar
 
@@ -45,6 +52,9 @@ Git/GitHub akisi, Faz 1 backend iskeleti ve Faz 2 domain modeli tamamlandi. Sonr
 - Satis MVP'de dogrudan yapilabilir olacak; stok satis aninda duser, gelir kaydi muhasebe raporlama/onay akisi icin olusur. Stok rezervasyon/geri alma detayi simdilik eklenmeyecek.
 - Vatandas fotograf yukleme opsiyonel olacak.
 - Sofor ekraninda ilk MVP gorev listesi + koordinat ile ilerleyebilir; harita entegrasyonu sonraki UI fazina yazildi.
+- Login akisi ilk asamada OAuth2 password form (`username` alaninda email veya TC no) ile calisacak.
+- JWT icinde kullanici kimligi `sub` alaninda tutulacak; rol bilgisi DB'den yuklenerek yetki kontrolu yapilacak.
+- Demo seed kullanicilari proje ici gelistirme amacli tutulacak; sifreleri `.env` ile degistirilebilir olacak.
 
 ## Dikkat Edilecek Noktalar
 
@@ -55,4 +65,4 @@ Git/GitHub akisi, Faz 1 backend iskeleti ve Faz 2 domain modeli tamamlandi. Sonr
 
 ## Sonraki Adim
 
-Faz 3'e gecilecek: sifre hashleme, JWT token uretimi, login endpoint'i, rol bazli endpoint korumasi, seed roller/personeller ve audit log servis temeli.
+Faz 4'e gecilecek: vatandas ihbar endpoint'i, ihbardan gorev uretme kuralı, kritik konteyner gorev olusumu, tekrar acik gorev engeli ve sofor gunluk gorev listeleme/baslatma/sonuclandirma akisi.

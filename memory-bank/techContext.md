@@ -8,6 +8,7 @@
 - ORM: SQLAlchemy 2.0.
 - Veritabani: PostgreSQL.
 - Auth: JWT.
+- Sifre hashleme: Passlib `pbkdf2_sha256`.
 - Harita bileseni: web tarafinda Leaflet onerilir; masaustu tarafinda gerekirse Qt WebEngine veya basit liste/koordinat tabanli MVP.
 - Test: pytest, httpx test client.
 - Migrasyon: Alembic.
@@ -67,6 +68,7 @@ memory-bank/
 - PostgreSQL Docker Compose ile calistirilacak.
 - `.env` ile veritabani, JWT secret ve uygulama ayarlari tasinacak.
 - Ilk seed verileri: roller, demo personeller, araclar, bolgeler, konteynerler ve sistem parametreleri.
+- Mevcut seed betigi su an roller ve demo personelleri olusturur: `python -m backend.app.db.seed`.
 
 ## Faz 1 Dogrulama
 
@@ -84,3 +86,10 @@ memory-bank/
 - `.venv/bin/alembic upgrade head`: gecti.
 - `.venv/bin/alembic current`: `00f31c245a1a (head)`.
 - `.venv/bin/alembic check`: `No new upgrade operations detected.`
+
+## Faz 3 Dogrulama
+
+- `.venv/bin/python -m ruff check backend`: gecti.
+- `.venv/bin/python -m pytest`: 9 test gecti.
+- `python3 -m compileall backend`: gecti.
+- `.venv/bin/python -m backend.app.db.seed`: gecti.

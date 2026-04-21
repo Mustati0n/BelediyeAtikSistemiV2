@@ -72,6 +72,9 @@ Operasyonel islem finansal kaydi dogrudan kesinlestirmez.
 - Login sonrasi token icinde kullanici kimligi ve rol bilgisi tasinir.
 - API endpoint'leri role gore korunur.
 - Masaustu ekranlari rol bazli acilir.
+- Uygulamada ilk auth endpoint'leri `POST /api/v1/auth/login`, `GET /api/v1/auth/me` ve `GET /api/v1/auth/admin-check` olarak acildi.
+- Token alma akisi `OAuth2PasswordRequestForm` ile calisir; `username` alaninda email veya TC no kullanilabilir.
+- Yetki kontrolu dependency katmaninda `require_roles(...)` ile yapilir.
 
 ## Audit Log Deseni
 
@@ -85,6 +88,11 @@ Kritik islemler `IslemLog` kaydina yazilir:
 - Maas odeme
 - Satis olusturma
 - Gorev sonuclandirma
+
+Mevcut uygulama durumu:
+
+- Login islemi `IslemLog` kaydina yazilmaktadir.
+- Audit log yazimi servis katmaninda `log_action(...)` fonksiyonu ile merkezilestirilmistir.
 
 ## Durum Makinesi Notlari
 
