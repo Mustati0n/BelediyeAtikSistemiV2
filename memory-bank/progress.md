@@ -1,0 +1,255 @@
+# Progress
+
+## Durum Ozeti
+
+Faz 6 tamamlandi, Faz 7 devam ediyor. Backend/API iskeleti ve domain modeli ustune auth, gorev havuzu, bakim, muhasebe, tesis teslim, stok ve satis endpoint'leri kuruldu. PySide6 masaustu frontend repo icine alindi; daha sonra ana arayuz hedefi web panele kaydi. React + Vite + TypeScript web paneli nginx uzerinden yayinda.
+
+## Tamamlananlar
+
+- [x] Repo baslangic durumu incelendi.
+- [x] Tasarim raporu satir sayisi ve ana basliklari kontrol edildi.
+- [x] Kapsam, roller, moduller ve teknoloji stack'i cikarildi.
+- [x] Memory Bank klasoru olusturuldu.
+- [x] Core Memory Bank dosyalari yazildi.
+- [x] UML tutarlilik raporu yazildi.
+- [x] Fazlara ayrilmis is akisi planı yazildi.
+- [x] Backend/API ile baslama karari alindi.
+- [x] Frontend'in sonradan eklenecegi ve backend'in API-first tasarlanacagi karari alindi.
+- [x] PostgreSQL icin Docker Compose karari alindi.
+- [x] Bakim teknik sureci ile muhasebe gider onayinin ayrilmasi karari alindi.
+- [x] Satisin MVP'de dogrudan yapilmasi karari alindi.
+- [x] Vatandas fotograf yuklemenin opsiyonel olmasi karari alindi.
+- [x] Sofor haritasinin sonraki UI iterasyonuna alinmasi karari alindi.
+- [x] Git deposu kullanma karari alindi.
+- [x] Yerel Git deposu baslatildi.
+- [x] `.gitignore` eklendi.
+- [x] Uzak Git repo baglama dokumani eklendi.
+- [x] GitHub remote URL ve commit kimligi alindi.
+- [x] Ilk commit atildi: `f2e2501 Initialize project memory bank and Git setup`.
+- [x] Remote `origin` eklendi.
+- [x] GitHub push basarili; `main` dali `origin/main` ile eslesiyor.
+- [x] Python proje yapisi kuruldu.
+- [x] Backend klasor yapisi olusturuldu.
+- [x] FastAPI uygulama girisi ve `/api/v1/health` endpoint'i eklendi.
+- [x] SQLAlchemy `Base`, engine ve session altyapisi eklendi.
+- [x] Docker Compose PostgreSQL servis tanimi eklendi.
+- [x] Alembic migrasyon altyapisi eklendi.
+- [x] `.env.example` ve ayar katmani eklendi.
+- [x] API-first klasor ayrimi, base schema ve servis katmani yerleri eklendi.
+- [x] Sanal ortamda bagimlilik kurulumu dogrulandi.
+- [x] Test, lint, compile ve compose config kontrolleri yapildi.
+- [x] Tum domain enumlari eklendi.
+- [x] SQLAlchemy domain modelleri ve iliskiler yazildi.
+- [x] Check constraint, unique constraint, index ve nullable kararları modellere islendi.
+- [x] Ilk Alembic migration olusturuldu: `00f31c245a1a_create_initial_schema.py`.
+- [x] `alembic upgrade head` ile veritabani semasi olusturuldu.
+- [x] `alembic check` ile model ve migration senkronu dogrulandi.
+- [x] Backend test sayisi 5'e cikti ve hepsi gecti.
+- [x] JWT tabanli sifreleme ve token uretim altyapisi eklendi.
+- [x] `POST /api/v1/auth/login`, `GET /api/v1/auth/me` ve `GET /api/v1/auth/admin-check` endpoint'leri yazildi.
+- [x] Rol bazli endpoint koruma dependency'leri eklendi.
+- [x] Login islemi icin audit log yazimi eklendi.
+- [x] Roller ve demo personeller icin seed betigi yazildi.
+- [x] `.env.example` seed sifre ayarlariyla guncellendi.
+- [x] Auth/RBAC testleri eklendi; backend test sayisi 9'a cikti ve hepsi gecti.
+- [x] Gercek PostgreSQL veritabaninda seed komutu calistirildi.
+- [x] Vatandas ihbari icin public endpoint yazildi.
+- [x] Ihbardan otomatik gorev olusturma akisi eklendi.
+- [x] Konteyner doluluk guncelleme ve kritik gorev uretme servisi eklendi.
+- [x] Ayni konteyner icin tekrar acik gorev olusmasini engelleyen kontrol eklendi.
+- [x] Sistem yoneticisi icin gorev atama endpoint'i eklendi.
+- [x] Sofor gunluk gorev listeleme endpoint'i eklendi.
+- [x] Sofor gorev baslatma ve sonuclandirma endpoint'leri eklendi.
+- [x] Operasyon/gorev havuzu testleri eklendi; backend test sayisi 13'e cikti ve hepsi gecti.
+- [x] Swagger ve test icin temel operasyon endpoint listesi dokumante edildi.
+- [x] Arac listeleme, olusturma ve guncelleme endpoint'leri eklendi.
+- [x] Bakim kaydi olusturma ve teknik tamamlama endpoint'leri eklendi.
+- [x] Bakim kaydindan bekleyen gider kaydi uretimi eklendi.
+- [x] Muhasebe bekleyen gider listeleme ve gider onay/red endpoint'leri eklendi.
+- [x] Maas hesaplama endpoint'i eklendi.
+- [x] Avans/tekli odeme ve toplu maas odemesi endpoint'leri eklendi.
+- [x] Toplu odemede ayin 15'i kuralı eklendi.
+- [x] Kar-zarar rapor ozeti endpoint'i eklendi.
+- [x] Bakim/muhasebe testleri eklendi; backend test sayisi 18'e cikti ve hepsi gecti.
+- [x] Soforun tesis teslim endpoint'i eklendi.
+- [x] Operator teslim onayi endpoint'i eklendi.
+- [x] Ayristirma ve stok hareketi endpoint'i eklendi.
+- [x] Stok listeleme endpoint'i eklendi.
+- [x] Satis kaydi ve stok dusumu eklendi.
+- [x] Bekleyen gelir kaydi uretimi eklendi.
+- [x] Muhasebe gelir onay/red endpoint'leri eklendi.
+- [x] Geri donusum testleri eklendi; backend test sayisi 22'ye cikti ve hepsi gecti.
+- [x] Swagger ve test icin geri donusum endpoint listesi dokumante edildi.
+- [x] Paylasilan PySide6 desktop frontend `desktop/app/` altina alindi.
+- [x] Login ekraninin gercek backend auth akisina baglanmasi saglandi.
+- [x] Sofor vardiya/gorev/teslim sayfalarinin ilk canli backend baglantisi yapildi.
+- [x] Bakim arac durum sayfasinin ilk canli backend baglantisi yapildi.
+- [x] Yonetici `Filo` sayfasinin ilk canli backend baglantisi yapildi.
+- [x] Sofor gorevleri icin atanmis arac ozeti backend response'una eklendi.
+- [x] `desktop/README.md` icinde masaustu calistirma ve desteklenen roller not edildi.
+- [x] `web/` altinda React + Vite + TypeScript panel iskeleti olusturuldu.
+- [x] Web login, backend health, auth token saklama ve rol bazli yonlendirme eklendi.
+- [x] Nginx ile web panel `http://77.83.37.48` adresinde yayinlandi.
+- [x] Backend CORS web panel adreslerine acildi.
+- [x] Web admin sidebar alt menuleri eklendi.
+- [x] Web admin filo sayfasi canli API'ye baglandi.
+- [x] Web personel sayfasi ve backend personel endpoint'leri eklendi.
+- [x] Web konteyner/bolge sayfasi ve backend konteyner endpoint'leri eklendi.
+- [x] Web konteyner doluluk guncellemesi kritik esikte gorev uretecek operasyon endpoint'ine baglandi.
+- [x] Web sofor gunluk gorev sayfasi canli API'ye baglandi.
+- [x] Web admin gorev havuzu/atama sayfasi eklendi.
+- [x] Backend admin acik gorev listeleme endpoint'i eklendi: `GET /api/v1/operations/gorevler`.
+- [x] Backend bakim kaydi listeleme endpoint'i eklendi: `GET /api/v1/maintenance/bakim-kayitlari`.
+- [x] Web bakim teknisyeni bakim kayitlari sayfasi eklendi.
+- [x] Web muhasebe sayfasi eklendi; gider/gelir onay, maas ve kar-zarar canli API'ye baglandi.
+- [x] Backend geri donusum teslim listeleme endpoint'i eklendi: `GET /api/v1/recycling/teslimler`.
+- [x] Web geri donusum operatoru tesis islemleri sayfasi eklendi.
+- [x] Vatandas ihbar portali `/ihbar` route'u olarak eklendi.
+- [x] Vatandas ihbari public endpoint'e baglandi ve admin gorev havuzuna dustugu dogrulandi.
+- [x] Rol bazli sidebar filtresi eklendi; admin disindaki roller sadece kendi ekranlarini gorur.
+- [x] Frontend route guard eklendi; yetkisiz role ait URL elle yazildiginda kullanici kendi ana paneline yonlendirilir.
+- [x] Admin icin bakim, muhasebe ve tesis ekranlarinda izleme modu eklendi; operasyonel aksiyonlar pasif.
+- [x] Admin dashboard/denetim merkezi backend endpoint'i eklendi: `GET /api/v1/admin/dashboard`.
+- [x] Web `/admin` ana ekrani canli metrikler, finans ozeti ve audit log listesine baglandi.
+- [x] Backend test sayisi 30'a cikti ve tam paket gecti.
+- [x] Demo seed verileri genisletildi: arac, bolge, konteyner, kritik gorev, bakim/gider, tesis, stok ve gelir senaryolari.
+- [x] Canli uctan uca API testi yapildi: ihbar -> atama -> sofor tamamlama -> tesis teslim -> ayristirma/satis -> gelir onayi.
+- [x] Admin disi roller icin ozet ara ekranlari kaldirildi; ana menu dogrudan ilgili is ekranina yonlendirir.
+- [x] 4 kartli eski ozet grid'i desktopta tek satira sigacak sekilde duzeltildi.
+- [x] Domain alinmayacagi icin vatandas portali ayni IP uzerinde `/vatandas` ve `/ihbar` yollarina baglandi.
+- [x] Kisa kullanim dokumani yazildi: `docs/kullanim-kilavuzu.md`.
+- [x] Admin tablo/form UI kalite turu baslatildi; tablolar yatay ezilmeye karsi duzenlendi, personel bos durum eklendi, gorev atama butonu kosullu pasif hale getirildi.
+- [x] Finans/tesis/sofor kartlarinda buton kilidi ve uzun metin tasma duzeltmeleri yapildi.
+- [x] Admin ana sayfasi grafikler, KPI kartlari, finans ozeti, hizli islem kartlari ve son 6 log kaydi ile yeniden tasarlandi.
+- [x] Admin sidebar sadeleştirildi; cross-module izleme ekranlari dashboard hizli kartlarina tasindi.
+- [x] Admin alt sayfalarina dortlu ozet kartlari eklendi; Filo, Personel, Konteyner ve Gorevler ekranlari ilk turda daha okunur hale getirildi.
+- [x] Admin alt sayfalarinda islem panelleri ve filtre panelleri gorsel olarak ayrildi.
+- [x] Muhasebe rolunun maas islemlerinde personel listesini okuyamamasi duzeltildi; personel okuma yetkisi muhasebeye acildi, yazma yetkisi adminle sinirli kaldi.
+- [x] Web muhasebe ekrani finans KPI kartlari, maas/odeme merkezi, donem kontrolu ve onay kuyrugu olacak sekilde yeniden tasarlandi.
+- [x] Filo ve Personel ekranlarina filtre ozeti seridi ve daha okunur satir islem kontrolleri eklendi.
+- [x] Konteyner doluluk simulasyonu endpoint'i ve admin ekran butonu eklendi.
+- [x] Sofor ekranina koordinat bazli rota haritasi, durak pinleri, doluluk bilgisi ve tahmini mesafe eklendi.
+- [x] Sofor rota haritasi Leaflet + OpenStreetMap ile gercek Gaziantep haritasina tasindi; tarayici konum izniyle sofor marker'i eklendi.
+- [x] Demo konteyner/bolge seed verileri Gaziantep koordinatlarina tasindi.
+- [x] Sol sidebar ust yatay navigasyona tasindi; panel bos alanlari azaltildi.
+- [x] Sofor Gunluk Gorev ekrani harita merkezli operasyon kokpiti olarak yeniden tasarlandi.
+- [x] Sofor rotasi OSRM ile gercek arac yoluna baglandi; kus bakisi cizgi yalnizca yedek rota olarak kaldi.
+- [x] Sofor kokpitine rota optimize/manual modlari, pine tiklayinca gorev detayi ve modal icinden baslat/sonuclandir akisi eklendi.
+- [x] Admin gorev atama ekranina sonraki sira numarasini oneren hizli aksiyon eklendi.
+- [x] Vatandas portalinda konum izni deneyimi iyilestirildi; HTTPS/guvenli baglam engeli acik mesajla gosteriliyor ve Gaziantep merkez yedek konum butonu eklendi.
+- [x] Admin paneli rol bazli sol dikey sidebar'a geri alindi; admin disi roller ust navigasyonda kaldi.
+
+## Devam Edenler
+
+- [ ] Faz 7 web arayuzler ve demo deneyimi.
+- [x] Vatandas ihbar portalini ayri URL olarak sunmak: `/vatandas` ve `/ihbar`.
+- [x] Demo seed verilerini tamamlamak.
+- [x] Uctan uca demo akislarini test etmek.
+- [x] Admin dashboard/denetim ekranlarini profesyonel ozet ve log gorunumleriyle iyilestirmek.
+- [ ] Desktop tarafinda mock kalan admin ekranlari, web panel ana hedef oldugu icin ikincil oncelikte.
+
+## Siradakiler
+
+- [x] Demo seed verileri: bolge, konteyner, arac ve acik gorev senaryolari.
+- [x] Uctan uca demo: ihbar -> gorev -> admin atama -> sofor tamamlama; tesis teslim -> gelir onayi.
+
+## Yeni Siradakiler
+
+- [x] Admin UI icin ilk tablo ve aksiyon yerlesimi duzeltmeleri.
+- [x] Kisa kullanim dokumani: rol bazli girisler, demo akislari ve URL listesi.
+- [x] UI kalite kontrolu ilk tur: responsive tablo davranisi, bos durumlar, hata mesajlari ve buton kilitleri.
+- [x] Admin alt sayfalari icin ikinci sade kullanım/tasarim iyilestirme turu.
+- [x] Muhasebe yetki hatasi ve muhasebe ekraninin ilk profesyonel UI turu.
+- [x] Filo/Personel liste kullanisliligi icin filtre ozeti ve satir islem UI turu.
+- [x] Konteyner sensor simulasyonu ve sofor rota haritasi.
+- [x] Gercek harita altyapisi: Leaflet, OpenStreetMap, Gaziantep merkezli rota ve konum izni.
+- [x] Genel kabuk navigasyon revizyonu ve sofor harita UI yeniden tasarimi.
+- [x] OSRM yol rotasi entegrasyonu ve rota durum gostergesi.
+- [x] Sofor rota optimizasyonu, harita uzerinden gorev islemi ve admin sira onerisi.
+- [x] Vatandas konum akisi ve admin sol sidebar duzeni.
+- [x] Admin konteyner ekranina tum konteynerlerin filtrelerle senkron harita gorunumu eklendi.
+- [x] Admin icin detayli arama/filtreleme destekli tum log kayitlari sekmesi eklendi.
+- [x] IP uzerinden self-signed HTTPS yayini ve HTTPS altinda `/api/v1` reverse proxy kurulumu yapildi.
+- [x] Admin gorev ekraninda haritadan konum secerek yeni ihbar/gorev olusturma akisi eklendi.
+- [x] Vatandas portalina haritadan konum secimi ve 10 adet Gaziantep okul/universite/kurum hizli test konumu eklendi.
+- [x] Admin denetim dashboard'u komuta merkezi tasarimina gecirildi; KPI, gorsel operasyon haritasi, grafikler, finans, aksiyonlar ve log timeline'i eklendi.
+- [x] Admin denetim operasyon haritasi gercek Leaflet ozet haritasina cevrildi ve oncelikli aksiyon kartlari hizalama/tasma sorunlari duzeltildi.
+- [x] Admin dashboard'a canli operasyon yogunlugu ve kritik sistem uyarilari panelleri eklendi.
+- [x] Sistem parametreleri backend endpoint'leri, varsayilan seed verileri ve admin `/admin/parametreler` web sayfasi eklendi.
+- [x] Vatandas portalina ihbar numarasi ile durum sorgulama eklendi.
+- [x] Admin log ekranina CSV disa aktarim eklendi.
+- [x] Vatandas hizli test konumlari acilir panel haline getirildi.
+- [x] Admin log kayitlari 15 kayit/sayfa olacak sekilde offset destekli sayfalama paneline gecirildi.
+- [x] Admin finans icin muhasebeye yonlendirmeyen salt denetim sayfasi `/admin/finans` eklendi.
+- [x] Admin sidebar sirasi ile denetim dashboard hizli secim sirasi esitlendi.
+- [x] Geri donusum operatoru `/recycling/tesis` ekrani KPI'li, sekmeli, stok/satis/gecmis odakli profesyonel tesis kokpiti UI paketine gecirildi.
+- [x] Geri donusum satis kayitlarina alici firma ve belge no alanlari eklendi; yeni Alembic migration canli DB'ye uygulandi.
+- [x] Geri donusum stok hareket gecmisi ve satis gecmisi liste endpoint'leri eklendi; UI bu endpoint'lerden gecmis ve CSV aktarim uretir.
+- [x] Bakim teknisyeni `/maintenance/bakim` ekrani KPI'li, sekmeli, is emri/maliyet/gecmis odakli profesyonel bakim kokpiti UI paketine gecirildi.
+- [x] Bakim kayitlarina tur, oncelik, parca maliyeti, iscilik maliyeti, tedarikci, kilometre ve planlanan tarih alanlari eklendi; migration canli DB'ye uygulandi.
+- [x] Bakim demo seed verisi yeni detay alanlarini dolduracak sekilde guncellendi ve canlida dogrulandi.
+- [x] Konteyner ekranina bolge yogunlugu, kritik noktalar ve doluluk nabzi karar destek panelleri eklendi.
+- [x] Admin gorev ekranina gorev dagilimi ve aktif sofor hizli secim panelleri eklendi.
+- [x] Filo ekranina operasyon hazirligi, arac tipi dagilimi ve servis sinyali panelleri eklendi.
+- [x] Personel ekranina kadro sagligi, rol dagilimi ve maas yuku panelleri eklendi.
+- [x] Parametre ekranina kategori hizli secim ve degisiklik ozeti; login ekranina tek tik demo hesap secimi eklendi.
+- [x] Muhasebe paneli `Kokpit / Onay Kuyrugu / Bordro / Raporlar` sekmeli profesyonel finans kokpiti olarak yeniden tasarlandi.
+- [x] Muhasebe ekranina nakit akisi barlari, bekleyen net etki, tahmini sonuc, oncelikli onay listesi, filtrelenebilir onay defteri, CSV aktarim, bordro ozeti ve rapor kartlari eklendi.
+- [x] Muhasebe paneline personel bazli `Personel Karti` sekmesi eklendi; maas bilgisi, mesai/ozel gun/prim/kesinti ek kalemleri ve bordroya aktarim akisi kuruldu.
+- [x] Maas odemelerine kalici aciklama alani eklendi; personel karti ek kalemleri tekli/avans odeme aciklamasina yazilir.
+- [x] Rol bazli responsive kalite turu vatandas/ihbar panelinden baslatildi.
+- [x] Vatandas ihbar paneline galeriden/bilgisayardan fotograf yukleme, onizleme ve kaldirma akisi eklendi; fotograf URL alani korunuyor.
+- [x] Public fotograf upload/servis endpoint'leri eklendi ve test edildi.
+- [x] Vatandas ihbar panelinde mobil tek kolon, tam genislik butonlar ve dar ekran harita/form duzeni iyilestirildi.
+- [x] Admin denetim panelinde orta ekran/sidebar sikismasi icin ilk responsive grid duzeltmesi yapildi.
+- [x] Admin alt sayfalari icin form, tablo, KPI, harita, log ve parametre panellerinde 1180px/760px responsive kalite turu uygulandi.
+- [x] Sofor ekraninda hero, rota haritasi, rota ozeti, gorev listesi ve aksiyon butonlari icin responsive kalite turu uygulandi.
+- [x] Bakim ekraninda KPI, is emri, acik bakim kartlari, maliyet panelleri ve gecmis/timeline yapilari icin responsive kalite turu uygulandi.
+- [x] Muhasebe ekraninda kokpit, onay defteri, bordro, personel karti, ek kalemler ve rapor kartlari icin responsive kalite turu uygulandi.
+- [x] Geri donusum/tesis ekraninda KPI, sekmeler, teslim kuyrugu, stok, satis ve gecmis panelleri icin responsive kalite turu uygulandi.
+- [x] README mevcut web tabanli MVP durumuna gore guncellendi.
+- [x] Kullanim kilavuzu rol bazli ekranlar, demo akisi ve manuel test listesiyle yenilendi.
+- [x] `docs/sunum-test-plani.md` eklendi.
+- [x] Rol bazli canli API smoke testi yapildi; yetkili endpointler 200, yetkisiz sofor kontrolleri 403 dondu.
+- [x] Admin denetim dashboard, gorev atama ve log ekranlarindaki tasma/harf harf kirilma sorunlari icin hedefli UI duzeltme yapildi.
+- [x] Admin sidebar marka yazisi `Atik Yonetim Sistemi` olarak guncellendi; denetim KPI kartlari 8 karta tamamlanip 4+4 simetrik responsive duzene alindi; son log paneli genis ekranda alt panellerle daha uyumlu hizaya cekildi.
+- [x] Sofor gorev tamamlama akisinda arac icindeki atik kg/tipi alindi ve otomatik tesis teslim kaydi olusturuldu.
+- [x] Tesis teslim onayi atik tipi mevcutsa stoga otomatik islenecek sekilde genisletildi.
+- [x] Geri donusum operatoru icin manuel stok ekleme ve stok yenileme akisi eklendi.
+- [x] Operator gorev havuzuna silme aksiyonu eklendi; islemdeki gorevler korunur, ihbar/konteyner baglantilari dogru temizlenir.
+- [x] Tesis/operator gorev haritasi Gaziantep merkezli, sinirli ve hatali eski koordinatlara karsi korumali hale getirildi.
+- [x] Personel olusturma/duzenleme validasyonlari eklendi; TC, ad soyad, telefon, maas ve cocuk sayisi kurallari frontend/backend tarafinda uygulanir.
+- [x] Personel listesine duzenleme/guncelleme aksiyonu eklendi.
+- [x] Filo arac tipi listesi tutarli hale getirildi; konteyner yikama, geri donusum, konteyner tasiyici, yol supurme, tibbi atik ve vakumlu arac tipleri desteklenir.
+- [x] Filo icin kosullu hurdaya ayirma ve hurda satis akisi eklendi; satis muhasebeye bekleyen gelir kaydi olarak duser.
+- [x] Yeni teslim atik tipi/hurda durum migration'i canli DB'ye uygulandi; backend testleri 42 passed, web build ve canli dagitim basarili.
+- [x] Bakim maliyet ekrani UI duzenlendi; tekrarlayan maliyet ozeti kaldirildi ve kayit/muhasebe calisma alani daha dolu hale getirildi.
+- [x] Bakim is emrinde toplam maliyet parca + iscilik toplamindan otomatik hesaplanan salt okunur alan oldu.
+- [x] Maas ve Odeme Merkezi form aksiyonlari ayri satira alindi; Ek Kalemler ve genel form gridleri responsive tasma yapmayacak sekilde duzeltildi.
+- [x] Konteyner listesine tam duzenleme ve silme aksiyonlari eklendi; acik gorevi olan konteyner backend tarafinda silinmez.
+- [x] Konteyner silme endpoint'i audit log yazar ve testlerle dogrulandi; backend test paketi 44 passed, web build/canli dagitim basarili.
+- [x] Konteyner koordinat girisi kaldirildi; ekleme/duzenleme icin haritadan nokta secme akisi eklendi.
+- [x] Harita marker'ina tiklayarak konteyner secme, formda duzenleme ve popup onayi ile silme akisi eklendi.
+- [x] Tesis parametrelerine kagit, organik ve diger birim fiyatlari eklendi; tesis satis formu atik tipine gore varsayilan fiyati otomatik doldurur.
+- [x] Genel hata/basari bildirimi ekran ustu popup sistemine cevrildi; disariya tiklama, X ve Tamam ile kapanir.
+- [x] Admin konteyner formu 3 sutunlu veri/konum duzenine alindi; enlem-boylam bilgi paneli sagda, diger girisler iki sutun halinde hizalandi.
+- [x] Konteyner haritasi secim sirasinda zoom/pan ve sayfa scroll durumunu koruyacak sekilde duzeltildi.
+- [x] Admin log ekraninda sayfa basi kayit sayisi secilebilir hale getirildi; varsayilan 30 kayit.
+- [x] Vatandas ihbar sayfasi hizli konumlar kaldirilarak kompakt iki sutunlu aciklama/fotograf + harita/konum duzenine alindi.
+- [x] Admin gorev havuzunda ihbar fotografi ve tum detaylari gosteren gorev detay modali eklendi.
+- [x] Gorev ozeti API cevabina `kaynak.fotograf_url` alani eklendi ve operasyon testleri 14 passed olarak dogrulandi.
+- [x] Tesis `Teslimler` sekmesine durum/atik tipi filtreleri ve en yeni ilk varsayilan siralama eklendi; web build ve canli dagitim basarili.
+- [ ] API endpoint listesini rapora uygun son formatta cikarma.
+- [ ] Genel panel kullanislilik ve tasarim tutarliligi icin son UI turu.
+- [ ] Gercek cihaz/genisliklerde manuel responsive goz kontrolu ve ekran bazli ince ayar.
+- [ ] Sunum icin ekran goruntuleri ve demo sirasi hazirlama.
+
+## Bilinen Riskler
+
+- Python 3.14 ortaminda `fastapi.testclient.TestClient` ile ilk health testi askida kaldi; Faz 1 testi simdilik handler/app sozlesmesi uzerinden dogrulandi. Uygulama gelistikce ASGI/HTTP test yaklasimi tekrar degerlendirilecek.
+- Python 3.14 ortaminda `passlib+bcrypt` uyumsuzlugu goruldu; sifre hashleme `pbkdf2_sha256` ile kurulup test edildi.
+- Tesis/stok/satis sequence diyagraminin PlantUML kodu raporda yok; uygulama oncesi yeniden yazilmasi iyi olur.
+- `MaasOdeme` icin `personel + donem + odeme_tipi` unique constraint DB seviyesinde tanimli; avans icin coklu odeme ihtiyaci dogarsa bu kural yeniden ele alinabilir.
+- Masaustu harita gosterimi icin PySide6 tarafinda teknik secim net degil; ilk MVP'de gorev listesi + koordinat ile ilerlenebilir.
+- Satisin dogrudan yapilmasi stok rezervasyon/geri alma detayini disarida birakir; sonraki versiyonda gerekirse genisletilecek.
+- Zip'ten gelen desktop kodu halen cok sayida stil/lint uyarisi tasiyor; islevsel entegrasyon once, kod stili temizligi sonra yapilacak.
