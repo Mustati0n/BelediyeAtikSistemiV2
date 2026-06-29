@@ -1,16 +1,15 @@
 # Decisions
 
-Bu dosya kullanici ile netlesen kararlarin kisa kaydidir.
+Bu dosya proje içinde netleşen kararların kısa kayıt tutarıdır.
 
-## 2026-04-15 Kararlari
+## 2026-06-29 Kararları
 
-- Backend/API ve veritabani ile baslanacak; frontend ve PySide6 ekranlari sonraki fazlarda eklenecek.
-- Backend API-first tasarlanacak. Markdown raporundaki UI ekran listesi endpoint, schema, filtre, detay ve aksiyon tasarimina yansitilacak.
-- PostgreSQL Docker Compose ile calistirilacak.
-- Bakim kaydi olusunca muhasebeye bekleyen gider hemen dusecek.
-- Fiziksel bakim tamamlanmasi ile muhasebe gider onayi ayrik surecler olacak.
-- Satis MVP'de dogrudan yapilabilir olacak; stok satis aninda duser, gelir kaydi muhasebe raporlama/onay akisi icin olusur.
-- Satis icin stok rezervasyon veya reddedilince stok geri alma detayi simdilik uygulanmayacak.
-- Vatandas fotograf yukleme opsiyonel olacak.
-- Sofor PySide6 ekraninda ilk MVP icin gorev listesi + koordinat yeterli; harita sonraki UI iterasyonuna alindi.
-- Proje git deposu olarak baslatilacak. Codex yerel commit mesajlarini yazabilir; push icin uzak repo ve yetki gerekir.
+- Proje ana hedefi web tabanlı MVP olarak belirlenmiştir. Backend ve frontend birlikte geliştirilir, web arayüz aktif üretim akışı olur.
+- Backend API-first kalır; tüm ekranlar aynı API üzerinden çalışır.
+- Rol bazlı erişim, görev havuzu ve audit log temel iş kurallarıdır.
+- Vatandaş ihbarı doğrudan şoföre değil önce görev havuzuna düşer.
+- Operasyonel kayıtların muhasebe akışına bağlanması zorunludur; bakım ve satış işlemleri bekleyen gider/gelir kaydı üretir.
+- Harita, rota ve konum akışları web panelde canlı çalışır; gerçek IoT veya karmaşık rota optimizasyonu MVP kapsamında değildir.
+- Desktop/legacy ekranlar artık ana geliştirme hedefi değildir; gerektiğinde ayrı bakım olarak ele alınır.
+- Her değişiklikte test ve build doğrulaması yapılır; memory bank güncel tutulur.
+- README, dokümantasyon ve memory bank aynı anda güncel tutulur; proje sunum ve teslim hazırlığı için bu belge seti tek kaynak olarak kullanılır.

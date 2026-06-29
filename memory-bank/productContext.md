@@ -2,30 +2,32 @@
 
 ## Neden Var?
 
-Belediye atik operasyonlari cok sayida bolunmus is akisindan olusur: vatandas ihbarlari, konteyner takibi, saha gorevleri, arac bakimi, tesis stoklari ve muhasebe surecleri genelde ayri takip edilir. Bu proje bu operasyonlari tek sistemde birlestirerek gorevlerin, maliyetlerin ve durumlarin izlenebilir olmasini hedefler.
+Belediye atık operasyonları birçok ayrık iş akışından oluşur: vatandaş ihbarları, konteyner takibi, saha görevleri, araç bakımı, tesis stokları ve muhasebe süreçleri genellikle ayrı ayrı takip edilir. Bu proje bu süreçleri tek bir sistemde birleştirerek görevlerin, maliyetlerin ve durumların izlenebilir olmasını hedefler.
 
-## Cozulen Problemler
+Ana amaç, belediye personeli için hızlı karar alma, görev takibi ve maliyet görünürlüğü sağlamaktır.
 
-- Ihbarlarin kaybolmasi veya dogrudan sahaya plansiz dusmesi.
+## Çözülen Problemler
+
+- İhbarların kaybolması veya doğrudan sahaya plansız düşmesi.
 - Kritik dolu konteynerlerin manuel takip edilmesi.
-- Arac bakim maliyetlerinin finans surecine kontrolsuz aktarilmasi.
-- Geri donusum satis gelirlerinin operasyonla kopuk izlenmesi.
-- Personel maas, avans ve toplu odeme islemlerinde tekrar ve hata riski.
-- Sistem yoneticisinin operasyonel ve finansal tabloyu tek yerden goremeyisi.
+- Araç bakım maliyetlerinin finans sürecine kontrolsüz aktarılması.
+- Geri dönüşüm satış gelirlerinin operasyonla kopuk izlenmesi.
+- Personel maaş, avans ve toplu ödeme işlemlerinde tekrar ve hata riski.
+- Sistem yöneticisinin operasyonel ve finansal tabloyu tek yerden görememesi.
 
 ## Beklenen Deneyim
 
-- Yonetici icin yogun ama taranabilir dashboard, tablolar, filtreler ve grafikler.
-- Sofor icin sade, gorev odakli ve harita destekli operasyon ekrani.
-- Bakim teknisyeni icin arac secimi ve bakim kaydi girisini hizli yapan formlar.
-- Muhasebe icin bekleyen gider/gelir onaylari, maas islemleri ve raporlarin ayrildigi net ekranlar.
-- Geri donusum operatoru icin teslim alma, ayristirma, stok ve satis akisinin sirali ilerledigi ekranlar.
-- Vatandas icin uyeliksiz, acik ve kolay ihbar formu.
+- Yönetici için yoğun ama taranabilir bir denetim dashboard'u.
+- Şoför için sade, görev odaklı ve harita destekli operasyon ekranı.
+- Bakım teknisyeni için hızlı bakım kaydı ve maliyet girişi.
+- Muhasebe için bekleyen gider/gelir onayları, maaş işlemleri ve raporlar.
+- Geri dönüşüm operatörü için teslim alma, ayırıştırma, stok ve satış akışı.
+- Vatandaş için açık, hızlı ve kolay ihbar formu.
 
-## Urun Ilkeleri
+## Ürün İlkeleri
 
-- Rol bazli yetkilendirme temel kuraldir.
-- Ana operasyon birimi `Gorev` kaydidir.
-- Durum alanlari sureclerin omurgasidir.
-- Operasyonel kayit finansal kayda otomatik ama onay bekleyen sekilde donusur.
-- MVP'de sensor ve rota optimizasyonu gercek entegrasyon yerine simulasyon ve basit siralama ile ilerler.
+- Rol bazlı yetkilendirme temel kuraldır.
+- Ana operasyon birimi görev kaydıdır.
+- Durum alanları süreçlerin omurgasını oluşturur.
+- Operasyonel kayıt finansal kayda otomatik ama onay bekleyen şekilde dönüşür.
+- MVP, gerçek IoT ve karmaşık rota optimizasyonu yerine canlı çalışan web arayüz, servis katmanı ve test edilmiş iş akışları üzerine kuruludur.

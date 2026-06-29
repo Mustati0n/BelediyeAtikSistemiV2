@@ -1,145 +1,81 @@
 # Workflow and Phase Plan
 
-Bu dosya is akisinin ana takip panosudur. Her faz ilerledikce kutular isaretlenecek ve `progress.md` guncellenecek.
+Bu dosya iş akışının ana takip panosudur. Mevcut proje durumu web MVP odaklı olduğundan fazlar da bu gerçekliğe göre güncellenmiştir.
 
-## Faz 0 - Kesif, Dogrulama ve Proje Hafizasi
+## Faz 0 - Keşif, doğrulama ve proje hafızası
 
-Durum: Tamamlandi
+Durum: Tamamlandı
 
-- [x] Raporun kapsam ve modul basliklarini oku.
-- [x] Repo baslangic durumunu kontrol et.
-- [x] Memory Bank klasorunu olustur.
-- [x] Core Memory Bank dosyalarini yaz.
-- [x] UML ilk dogrulama notlarini cikar.
-- [x] Kullanici ile kritik karar sorularini netlestir.
+- [x] Proje kapsamı, roller ve ana modüller belirlendi.
+- [x] Repo başlangıç durumu ve mevcut geliştirme ortamı incelendi.
+- [x] Memory bank oluşturuldu ve temel dokümantasyon yazıldı.
 
-Teslim: `memory-bank/` dokumantasyonu, UML notlari, faz planı, acik sorular.
+## Faz 1 - Proje iskeleti ve altyapı
 
-## Faz 1 - Proje Iskeleti ve Altyapi
+Durum: Tamamlandı
 
-Durum: Tamamlandi
+- [x] Python proje yapısı kuruldu.
+- [x] Git deposu başlatıldı.
+- [x] FastAPI uygulama girişi, veritabanı altyapısı ve migrasyon sistemi kuruldu.
+- [x] Test altyapısı ve yapılandırma katmanı oluşturuldu.
 
-- [x] Python proje yapisini kur.
-- [x] Git deposunu baslat.
-- [x] Backend klasor yapisini olustur.
-- [x] FastAPI uygulama girisini hazirla.
-- [x] SQLAlchemy 2.0 ve veritabani oturum altyapisini kur.
-- [x] Docker Compose ile PostgreSQL servis tanimini ekle.
-- [x] Alembic migrasyon altyapisini kur.
-- [x] Test altyapisini kur.
-- [x] Ortam degiskenleri ve konfig yapisini ekle.
-- [x] API-first sozlesme yapisini kur: request/response schema'lari, servis katmani ve UI dostu endpoint ayrimi.
+## Faz 2 - Domain modeli ve veritabanı
 
-Teslim: Calisan bos API, health endpoint, test komutu, migrasyon altyapisi.
+Durum: Tamamlandı
 
-## Faz 2 - Domain Modeli ve Veritabani
+- [x] Temel modeller ve ilişkiler oluşturuldu.
+- [x] İlk migrasyon üretildi ve uygulandı.
+- [x] Seed ve demo verileri desteklenecek şekilde yapılandırıldı.
 
-Durum: Tamamlandi
+## Faz 3 - Auth, RBAC ve audit
 
-- [x] Enumlari tanimla.
-- [x] Rol ve Personel modelini yaz.
-- [x] Bolge, Konteyner, Ihbar ve Gorev modelini yaz.
-- [x] Arac ve BakimKaydi modelini yaz.
-- [x] MaasOdeme, GiderKaydi, GelirKaydi modelini yaz.
-- [x] TesisTeslim, Stok, StokHareketi ve Satis modelini yaz.
-- [x] IslemLog ve SistemParametresi modelini yaz.
-- [x] Iliskileri, benzersizlikleri ve nullable kurallarini netlestir.
-- [x] Ilk migrasyonu uret ve uygula.
+Durum: Tamamlandı
 
-Teslim: Veritabani semasi, migrasyon, model testleri.
+- [x] JWT tabanlı giriş ve rol bazlı yetkilendirme kuruldu.
+- [x] Audit log akışı eklendi.
+- [x] Demo kullanıcılar ve seed verileri hazırlandı.
 
-## Faz 3 - Auth, RBAC ve Audit
+## Faz 4 - Operasyon ve görev havuzu
 
-Durum: Tamamlandi
+Durum: Tamamlandı
 
-- [x] Sifre hashleme altyapisini ekle.
-- [x] JWT login endpoint'ini yaz.
-- [x] Rol bazli endpoint korumasini kur.
-- [x] Seed roller ve demo personeller ekle.
-- [x] Audit log servis katmanini ekle.
-- [x] Kritik islemler icin log yazma desenini yerlestir.
+- [x] Vatandaş ihbarı ve otomatik görev oluşturma akışı kuruldu.
+- [x] Kritik konteyner ve görev atama akışı uygulandı.
+- [x] Şoför görev listesi, başlatma ve sonuçlandırma akışları hazırlandı.
 
-Teslim: Rol bazli login, korunmus endpoint ornegi, audit log kaydi.
+## Faz 5 - Bakım ve muhasebe
 
-## Faz 4 - Operasyon ve Gorev Havuzu
+Durum: Tamamlandı
 
-Durum: Tamamlandi
+- [x] Bakım kayıtları, gider akışı ve teknik tamamlama süreci kuruldu.
+- [x] Maaş, avans, tekli/toplu ödeme ve kar/zarar rapor akışları eklendi.
 
-- [x] Vatandas ihbari API'sini yaz.
-- [x] Ihbardan gorev olusturma kuralini ekle.
-- [x] Konteyner doluluk guncelleme servisini yaz.
-- [x] Kritik konteynerden gorev olusturma kuralini ekle.
-- [x] Ayni konteyner icin tekrar acik gorev olusmasini engelle.
-- [x] Gunluk gorev listesi ve basit rota siralama endpoint'ini yaz.
-- [x] Gorev baslatma ve sonuclandirma endpoint'lerini yaz.
+## Faz 6 - Tesis, stok ve satış
 
-Teslim: Ihbar + kritik konteyner -> gorev -> sofor rota -> sonuc akisi.
+Durum: Tamamlandı
 
-## Faz 5 - Bakim ve Muhasebe
+- [x] Tesis teslimi, ayırıştırma, stok hareketi ve satış akışı uygulandı.
+- [x] Gelir onay süreci ve muhasebe entegrasyonu kuruldu.
 
-Durum: Tamamlandi
+## Faz 7 - Arayüzler
 
-- [x] Arac CRUD ve durum yonetimini yaz.
-- [x] Bakim kaydi olusturma endpoint'ini yaz.
-- [x] Bakimdan bekleyen gider kaydi uret.
-- [x] Muhasebe gider onay/red endpoint'lerini yaz.
-- [x] Maas hesaplama, tekli odeme ve avans endpoint'lerini yaz.
-- [x] Toplu maas odemesi icin ayin 15'i kuralini ekle.
-- [x] Kar/zarar raporu icin gelir-gider ozetini yaz.
+Durum: Tamamlandı
 
-Teslim: Bakim-gider onayi, maas odeme, finans raporu.
+- [x] Web panel rol bazlı ekranlarla tamamlandı.
+- [x] Yönetim, şoför, bakım, muhasebe ve tesis ekranları canlı API'ye bağlandı.
+- [x] Vatandaş ihbar portalı web üzerinden çalışır durumda.
+- [x] Harita, rota, responsive tasarım ve kullanıcı akışları iyileştirildi.
 
-## Faz 6 - Tesis, Stok ve Satis
+## Faz 8 - Entegrasyon, test ve demo
 
-Durum: Tamamlandi
+Durum: Tamamlandı
 
-- [x] Sofor tesise atik teslim endpoint'ini yaz.
-- [x] Operator teslim alma akisini yaz.
-- [x] Ayristirma ve stok hareketi akisini yaz.
-- [x] Stok goruntuleme endpoint'lerini yaz.
-- [x] Satis kaydi olustur ve stoktan dus.
-- [x] Satistan bekleyen gelir kaydi uret.
-- [x] Muhasebe gelir onay/red endpoint'lerini yaz.
+- [x] Uçtan uca senaryolar test edildi.
+- [x] Demo seed ve canlı akışlar doğrulandı.
+- [x] Backend testleri ve frontend build doğrulandı.
 
-Teslim: Teslim -> ayristirma -> stok -> satis -> gelir onayi akisi.
+## Şimdiki hedef
 
-## Faz 7 - Arayuzler
-
-Durum: Devam Ediyor
-
-- [x] Vatandas ihbar portalini web olarak yap.
-- [x] Rol bazli panel ayrimi, sidebar filtresi ve route guard ekle.
-- [x] Admin icin cross-module izleme modunu baslat.
-- [x] Login ve rol yonlendirme ekranlarinin ilk canli backend baglantisini yap.
-- [x] React + Vite + TypeScript web panel iskeletini kur.
-- [x] Web paneli nginx ile yayinla.
-- [x] Yonetici filo ekranini canli API'ye bagla.
-- [x] Yonetici personel ekranini canli API'ye bagla.
-- [x] Yonetici konteyner/bolge ekranini canli API'ye bagla.
-- [x] Yonetici gorev havuzu ve atama ekranini canli API'ye bagla.
-- [x] Yonetici dashboard ve kalan tanim ekranlarini yap.
-- [x] Sofor operasyon ekranlarinin ilk canli backend baglantisini yap.
-- [x] Sofor ekranina ilk MVP'de gorev listesi + koordinat gosterimini ekle.
-- [ ] Sofor harita entegrasyonunu sonraki UI iterasyonuna ayir ve teknik secimi netlestir.
-- [x] Bakim teknisyeni ekranlarinin ilk canli backend baglantisini yap.
-- [x] Bakim kaydi olusturma, gecmis listeleme ve teknik tamamlama web ekranini yap.
-- [x] Muhasebe ekranlarini yap.
-- [x] Muhasebe gider/gelir onay, maas ve kar-zarar ozetini web panelde canli API'ye bagla.
-- [x] Geri donusum operatoru ekranlarini yap.
-- [x] Teslim onay, ayristirma, stok ve satis akislarini web panelde canli API'ye bagla.
-- [ ] Mock kalan admin sayfalarini gercek endpoint'lerle tek tek degistir.
-
-Teslim: Rol bazli kullanilabilir MVP arayuzleri.
-
-## Faz 8 - Entegrasyon, Test ve Demo
-
-Durum: Devam Ediyor
-
-- [x] Uctan uca test senaryolarini yaz.
-- [x] Demo seed verilerini tamamla.
-- [ ] API dokumantasyonunu kontrol et.
-- [x] UI akislari ile API entegrasyonlarini test et.
-- [ ] Bilinen hatalari gider.
-- [x] Kisa kullanim dokumani hazirla.
-
-Teslim: Calisan demo, test raporu, kullanim notlari.
+- [x] Mevcut web MVP'yi stabil ve sunuma hazır tutmak.
+- [x] Yeni özellik eklemeden önce doğrulama ve dokümantasyonu korumak.
+- [x] README, docs ve memory bank setini teslim hazırlığına uygun hale getirmek.

@@ -2,52 +2,56 @@
 
 ## Proje
 
-Akilli Sehir Atik Yonetimi ve Geri Donusum Sistemi, belediyeye bagli atik toplama, vatandas ihbari, konteyner doluluk takibi, arac bakimi, geri donusum tesisi ve finans operasyonlarini tek merkezden yonetmek icin gelistirilecek entegre bir yazilim sistemidir.
+Akıllı Şehir Atık Yönetimi ve Geri Dönüşüm Sistemi, belediyeye bağlı atık toplama, vatandaş ihbarı, konteyner doluluk takibi, araç bakımı, geri dönüşüm tesisi ve finans operasyonlarını tek merkezden yönetmek için geliştirilen web tabanlı bir MVP platformudur.
 
-Ana kaynak rapor:
+Bu sürüm, canlı çalışan bir web paneli, FastAPI tabanlı backend ve rol bazlı iş akışları ile sunuma hazır duruma getirilmiştir.
 
-- `/home/mustati0n/İndirilenler/TasarimRaporu/Akıllı Şehir Atık Yönetimi ve Geri Dönüşüm Sistemi 31fae0a42aa680c4b45bff3b0a6164bd.md`
+## Ana Amaç
+
+- Vatandaş ihbarlarını merkezi görev havuzuna almak.
+- Kritik konteyner olaylarını operasyonel görev haline getirmek.
+- Şoför, bakım, muhasebe ve tesis operasyonlarını ortak bir API ve rol bazlı arayüz üzerinden yürütmek.
+- Operasyonel kayıtların muhasebe ve audit akışına bağlanmasını sağlamak.
 
 ## Kapsam
 
-Sistem asagidaki modulleri kapsar:
+Sistem şu modülleri kapsar:
 
-- Sistem yoneticisi modulu: personel, rol, sistem parametreleri, bolge, konteyner, arac, dashboard ve audit log yonetimi.
-- Vatandas ihbar portali: uyeliksiz web ihbar formu, konum, aciklama ve fotograf yukleme.
-- Akilli konteyner ve IoT simulasyonu: sensor yerine arka plan servisinin konteyner doluluklarini uretmesi.
-- Gorev havuzu ve rota: vatandas ihbarlari ile kritik konteynerlerin sofore dogrudan degil, gorev havuzuna dusmesi.
-- Sofor operasyonu: gunluk rota, gorev baslatma, gorev sonuclandirma, tesise atik teslimi.
-- Bakim yonetimi: arac bakim/ariza kaydi, arac durumunun bakimda isaretlenmesi, gider kaydi uretimi.
-- Muhasebe ve finans: maas, avans/tekli/toplu odeme, bekleyen gider/gelir onayi, kar/zarar raporu.
-- Geri donusum tesisi: teslim alma, ayristirma, stok hareketi, satis, gelir onay sureci.
+- Yönetim ve denetim: personel, rol, sistem parametreleri, bölge, konteyner, araç, dashboard ve audit log yönetimi.
+- Vatandaş ihbar portalı: üyeliksiz web ihbar formu, konum, açıklama ve fotoğraf yükleme.
+- Görev havuzu ve rota: vatandaş ihbarları ve kritik konteyner olayları doğrudan şoföre değil, merkezi görev havuzuna düşer.
+- Şoför operasyonu: günlük rota, görev başlatma, görev sonuçlandırma, tesise atık teslimi.
+- Bakım yönetimi: araç bakım/ariza kaydı, bakım durumu, gider kaydı üretimi.
+- Muhasebe ve finans: maaş, avans/tekli/toplu ödeme, bekleyen gider/gelir onayı, kar/zarar raporu.
+- Geri dönüşüm tesisi: teslim alma, ayırıştırma, stok hareketi, satış, gelir onay süreci.
 
-## Kapsam Disi
+## Kapsam Dışı
 
-- Gercek fiziksel IoT sensor entegrasyonu.
-- Canli GPS arac takibi.
-- Harici banka veya odeme sistemi entegrasyonu.
+- Gerçek fiziksel IoT sensör entegrasyonu.
+- Canlı GPS araç takibi.
+- Harici banka veya ödeme sistemi entegrasyonu.
 - Mobil uygulama.
-- Yapay zeka tabanli fotograf dogrulama.
-- Cok kurumlu veya cok belediyeli yapi.
-- Gercek zamanli trafik verisiyle ileri rota optimizasyonu.
-- Vatandas icin uyelikli tam takip sistemi.
+- Yapay zeka tabanlı fotoğraf doğrulama.
+- Çok kurumlu veya çok belediyeli yapı.
+- Gerçek zamanlı trafik verisiyle ileri rota optimizasyonu.
+- Vatandaş için üyelikli tam takip sistemi.
 
-## Kullanici Rolleri
+## Kullanıcı Rolleri
 
-- Vatandas
-- Sistem Yoneticisi
+- Vatandaş
+- Sistem Yöneticisi
 - Muhasebe Personeli
-- Bakim Teknisyeni
-- Sofor
-- Geri Donusum Operatoru
+- Bakım Teknisyeni
+- Şoför
+- Geri Dönüşüm Operatörü
 
-## Basari Kriterleri
+## Başarı Kriterleri
 
-- Her rol yalnizca kendi ekranlarina ve islemlerine erisir.
-- Ihbarlar ve kritik konteynerler merkezi gorev havuzunda toplanir.
-- Acik gorev varken ayni konteyner icin tekrar eden gorev olusmaz.
-- Bakim kayitlari muhasebeye bekleyen gider olarak akar.
-- Satis kayitlari muhasebeye bekleyen gelir olarak akar.
-- Toplu maas odemesi yalnizca ayin 15'inde calisir.
-- Kritik islemler audit log'a yazilir.
-- Sistem MVP asamasinda Linux ortaminda calisabilir ve test edilebilir olur.
+- Her rol yalnızca kendi ekranlarına ve işlemlerine erişir.
+- İhbarlar ve kritik konteynerler merkezi görev havuzunda toplanır.
+- Açık görev varken aynı konteyner için tekrar eden görev oluşmaz.
+- Bakım kayıtları muhasebeye bekleyen gider olarak akar.
+- Satış kayıtları muhasebeye bekleyen gelir olarak akar.
+- Toplu maaş ödemesi yalnızca ayın 15'inde çalışır.
+- Kritik işlemler audit log'a yazılır.
+- Sistem Linux ortamında çalışır, web paneli üretim build ile servis edilir ve backend testleri geçer.
