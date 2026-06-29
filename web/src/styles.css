@@ -581,6 +581,104 @@ button {
   background: #eef3f0;
 }
 
+.page-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+  padding: 20px 22px;
+  border: 1px solid rgba(16, 117, 45, 0.08);
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f7fbf8 0%, #eef5ef 100%);
+  box-shadow: 0 12px 28px rgba(10, 26, 17, 0.06);
+}
+
+.page-hero h1 {
+  margin: 0;
+  color: #14231a;
+  font-size: clamp(22px, 2.4vw, 30px);
+}
+
+.page-hero p {
+  margin: 4px 0 0;
+  max-width: 860px;
+  color: #6b786f;
+  font-size: 14px;
+}
+
+.fleet-stat-card,
+.data-panel,
+.form-panel,
+.filter-panel,
+.command-panel,
+.finance-control-panel,
+.personnel-command-panel,
+.fleet-command-panel,
+.ops-planning-panel,
+.city-ops-panel,
+.settings-command-panel,
+.maintenance-card,
+.approval-card,
+.stock-card {
+  border: 1px solid rgba(16, 117, 45, 0.08);
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(10, 26, 17, 0.04);
+}
+
+.panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.panel-heading h2,
+.panel-heading h3,
+.panel-heading strong {
+  margin: 0;
+  color: #14231a;
+  font-size: 16px;
+}
+
+.toolbar-actions,
+.row-actions,
+.citizen-photo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.row-action,
+.secondary-button {
+  min-height: 40px;
+  border: 1px solid #d8e3dc;
+  border-radius: 8px;
+  padding: 0 12px;
+  background: #f7fbf8;
+  color: #10752d;
+  font-weight: 850;
+}
+
+.row-action:hover,
+.secondary-button:hover {
+  border-color: rgba(16, 117, 45, 0.28);
+  background: #eef7f1;
+}
+
+.empty-state {
+  padding: 14px 16px;
+  border: 1px dashed #d8e3dc;
+  border-radius: 10px;
+  background: #f8fbf9;
+  color: #66756b;
+  font-size: 13px;
+  font-weight: 700;
+}
+
 .sidebar {
   position: sticky;
   top: 0;
@@ -701,6 +799,23 @@ button {
   width: min(1680px, 100%);
   margin: 0 auto;
   padding: 22px 26px 30px;
+}
+
+@media (max-width: 1024px) {
+  .workspace {
+    padding: 16px 16px 24px;
+  }
+}
+
+@media (max-width: 760px) {
+  .page-hero {
+    padding: 16px;
+  }
+
+  .panel-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .admin-shell {

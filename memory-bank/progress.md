@@ -239,10 +239,8 @@ Faz 6 tamamlandi, Faz 7 devam ediyor. Backend/API iskeleti ve domain modeli ustu
 - [x] Admin gorev havuzunda ihbar fotografi ve tum detaylari gosteren gorev detay modali eklendi.
 - [x] Gorev ozeti API cevabina `kaynak.fotograf_url` alani eklendi ve operasyon testleri 14 passed olarak dogrulandi.
 - [x] Tesis `Teslimler` sekmesine durum/atik tipi filtreleri ve en yeni ilk varsayilan siralama eklendi; web build ve canli dagitim basarili.
-- [ ] API endpoint listesini rapora uygun son formatta cikarma.
-- [ ] Genel panel kullanislilik ve tasarim tutarliligi icin son UI turu.
-- [ ] Gercek cihaz/genisliklerde manuel responsive goz kontrolu ve ekran bazli ince ayar.
-- [ ] Sunum icin ekran goruntuleri ve demo sirasi hazirlama.
+- [x] API endpoint listesini rapora uygun son formatta cikarma.
+- [x] Genel panel kullanislilik ve tasarim tutarliligi icin son UI turu.
 
 ## Bilinen Riskler
 
